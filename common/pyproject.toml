@@ -1,0 +1,12 @@
+[project]
+name = "common_toml"
+version = "0.1.0"
+dependencies = [
+    # part1
+    "neo4j~=5.28",
+    "python-dotenv>=1.2.1",
+
+    # part2 (csv2kg)
+    "pandas~=3.0",
+    "ipykernel>=6.29.0",
+]
