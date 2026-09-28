@@ -9,4 +9,11 @@ dependencies = [
     # part2 (csv2kg)
     "pandas~=3.0",
     "ipykernel>=6.29.0",
+
+    # part3 (pdf2kg)
+    "openai>=2.0.0",
+    "langchain-text-splitters>=1.1.0",
+    "PyMuPDF>=1.25.0",
+    "docling>=2.0.0",
+    "docling-hierarchical-pdf>=0.1.0",
 ]
