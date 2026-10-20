@@ -9,6 +9,7 @@
 
 실행 위치: part2/csv2kg
 """
+import csv
 import os
 from pathlib import Path
 
@@ -47,7 +48,10 @@ def create_constraints(driver):
     #   Passenger.PassengerId / PClass.Pclass / Cabin.Cabin / Port.Port
     #   힌트: CREATE CONSTRAINT <이름> IF NOT EXISTS FOR (x:Label) REQUIRE x.prop IS UNIQUE
     constraints = [
-        ...,
+        "CREATE CONSTRAINT passenger_id IF NOT EXISTS FOR (p:Passenger) REQUIRE p.PassengerId IS UNIQUE",
+        "CREATE CONSTRAINT pclass_id IF NOT EXISTS FOR (c:PClass) REQUIRE c.Pclass IS UNIQUE",
+        "CREATE CONSTRAINT cabin_id IF NOT EXISTS FOR (c:Cabin) REQUIRE c.Cabin IS UNIQUE",
+        "CREATE CONSTRAINT port_id IF NOT EXISTS FOR (p:Port) REQUIRE p.Port IS UNIQUE",
     ]
     for constraint in constraints:
         driver.execute_query(constraint, database_=NEO4J_DATABASE)
@@ -59,17 +63,31 @@ def load_passenger_nodes(driver, csv_path):
 
     # TODO 3-1: DataFrame 을 dict 리스트로 바꾼다. 단, NaN 은 None 으로.
     #           힌트: df.where(pd.notnull(df), None).to_dict(...)  (to_dict 의 인자는 'records')
-    records = ...
+    records = df.where(pd.notnull(df), None).to_dict("records")
 
     # TODO 3-2: UNWIND 로 records 를 풀어 Passenger 노드를 만드는 Cypher 를 쓴다.
     #   속성: PassengerId, Name, Sex, Age, Survived, SibSp, Parch, Fare, Ticket
     query = """
-    ...
+    UNWIND $records AS row
+    CREATE (
+        p: Passenger{
+            PassengerId: row.PassengerId,
+            Name: row.Name,
+            Sex: row.Sex,
+            Age: row.Age,
+            Survived: row.Survived,
+            SibSp: row.SibSp,
+            Parch: row.Parch,
+            Fare: row.Fare,
+            Ticket: row.Ticket
+        }
+    )
     """
 
     # TODO 3-3: 쿼리를 실행하고 summary 에서 "만들어진 노드 수"를 출력한다.
     #           힌트: driver.execute_query(query, records=records, database_=...).summary.counters
-    ...
+    count = driver.execute_query(query, records=records, database_=NEO4J_DATABASE).summary.counters.nodes_created
+    print(f"  Passenger 노드 생성 : ${count}개")
 
 
 # TODO 3-4: load_pclass_nodes / load_cabin_nodes / load_port_nodes 를
@@ -79,6 +97,56 @@ def load_passenger_nodes(driver, csv_path):
 #   - Port  : Port, PortName
 #   (CSV 컬럼명은 output/ 폴더의 nodes_*.csv 헤더를 열어서 확인하자)
 
+def load_pclass_nodes(driver, csv_path):
+    df = pd.read_csv(csv_path)
+    records = df.where(pd.notnull(df), None).to_dict("records")
+    
+    query = """
+    UNWIND $records AS row
+    CREATE (
+        p: PClass{
+            Pclass: row.Pclass,
+            ClassName: row.ClassName,
+            SES: row.SES
+        }
+    )
+    """
+    
+    count = driver.execute_query(query, records, database_=NEO4J_DATABASE).summary.counter.nodes_created
+    print(f"  PClass 노드 생성 : ${count}개")
+
+def load_cabin_nodes(driver, csv_path):
+    df = pd.read_csv(csv_path)
+    records = df.where(pd.notnull(df), None).to_dict("records")
+    
+    query ="""
+    UNWIND $records AS row
+    CREATE (
+        p: Cabin {
+            Cabin: row.Cabin
+        }
+    )
+    """
+    
+    count = driver.execute_query(query, records, database_=NEO4J_DATABASE).summary.counter.nodes_created
+    print(f"  Cabin 노드 생성 : ${count}개")
+
+def load_port_nodes(driver, csv_path):
+    df = pd.read_csv(csv_path)
+    records = df.where(pd.notnull(df), None).to_dict("records")
+    
+    query = """
+    UNWIND $records AS row
+    CREATE (
+        p: Port{
+            Port: row.Port,
+            PortName: row.PortName
+        }
+    )
+    """
+    
+    count = driver.execute_query(query, records, database_=NEO4J_DATABASE).summary.counter.nodes_created
+    print(f"  Port 노드 생성 : ${count}개")
 
 # ---------- 4. 관계 ----------
 def create_traveled_in_relationships(driver, csv_path):
@@ -90,21 +158,70 @@ def create_traveled_in_relationships(driver, csv_path):
     #   힌트: rels_passenger_pclass.csv 의 열은 PassengerId, Pclass
     #   (p:Passenger {...}) 와 (c:PClass {...}) 를 각각 MATCH 한 뒤 (p)-[:TRAVELED_IN]->(c)
     query = """
-    ...
+    UNWIND $records AS row
+    MATCH (p:Passenger {PassengerId: row.PassengerId})
+    MATCH (c:PClass {Pclass: row.Pclass})
+    CREATE (p)-[:TRAVELED_IN]->(c)
     """
 
     # TODO 4-2: 실행하고 "만들어진 관계 수"를 출력한다. (counters 의 relationships_created)
-    ...
-
+    count = driver.execute_query(query, records, database_=NEO4J_DATABASE).summary.counter.nodes_created
+    print(f"  TRAVELED_IN 관계 생성 : ${count}개")
 
 # TODO 4-3: create_stayed_in_relationships (Passenger -> Cabin),
 #           create_embarked_at_relationships (Passenger -> Port) 를 같은 패턴으로 만든다.
+def create_stayed_in_relationships(driver, csv_path):
+    """Passenger -> Cabin (STAYED_IN)"""
+    df = pd.read_csv(csv_path)
+    records = df.where(pd.notnull(df), None).to_dict("records")
+    
+    query = """
+    UNWIND $records AS row
+    MATCH (p:Passenger {PassengerId: row.PassengerId})
+    MATCH (c:Cabin {Cabin: row.Cabin})
+    CREATE (p)-[:STAYED_IN]->(c)
+    """
+    
+    count = driver.execute_query(query, records, database_=NEO4J_DATABASE).summary.counter.nodes_created
+    print(f"  STAYED_IN 관계 생성 : ${count}개")
+
+def create_embarked_at_relationships(driver, csv_path):
+    """Passenger -> Port (EMBARKED_AT)"""
+    df = pd.read_csv(csv_path)
+    records = df.where(pd.notnull(df), None).to_dict("records")
+    
+    query = """
+    UNWIND $records AS row
+    MATCH (p:Passenger {PassengerId: row.PassengerId})
+    MATCH (port:Port {Port: row.Port})
+    CREATE (p)-[:EMBARKED_AT]->(port)
+    """
+    
+    count = driver.execute_query(query, records, database_=NEO4J_DATABASE).summary.counter.nodes_created
+    print(f"  EMBARKED_AT 관계 생성 : ${count}개")
 
 # TODO 4-4: create_traveled_with_relationships (Passenger <-> Passenger)
 #   - 두 노드 키 열이 PassengerId1, PassengerId2 이다. 변수 이름이 겹치지 않게 주의.
 #   - 관계에 Ticket 속성을 달아 보자: -[:TRAVELED_WITH {Ticket: row.Ticket}]->
 #   - CSV 파일이 없을 수도 있다. 없으면 안내만 출력하고 return. (Path(...).exists())
-
+def create_traveled_with_relationships(driver, csv_path):
+    """Passenger <-> Passenger (TRAVELED_WITH), 같은 티켓으로 함께 탄 승객"""
+    if not Path(csv_path).exists():
+        print("  TRAVELED_WITH 파일 없음 (모두 단독 여행)")
+        return
+    
+    df = pd.read_csv(csv_path)
+    records = df.where(pd.notnull(df), None).to_dict("records")
+    
+    query = """
+    UNWIND $records AS row
+    MATCH (p1:Passenger {PassengerId: row.PassengerId1})
+    MATCH (p2:Passenger {PassengerId: row.PassengerId2})
+    CREATE (p1)-[:TRAVELED_WITH {Ticket: row.Ticket}]->(p2)
+    """
+    
+    count = driver.execute_query(query, records, database_=NEO4J_DATABASE).summary.counter.nodes_created
+    print(f"  TRAVELED_WITH 관계 생성 : ${count}개")
 
 # ---------- 5. 통계 ----------
 def print_graph_statistics(driver):
@@ -130,6 +247,8 @@ def main():
     password = os.getenv("NEO4J_PASSWORD")
 
     # TODO 6-1: 비밀번호가 없으면 ValueError 를 낸다.
+    if not password:
+        raise ValueError("NEO4J_PASSWORD 환경변수가 없습니다. .env 파일을 확인하세요.")
 
     csv_files = {
         "passenger": OUTPUT_DIR / "nodes_passenger.csv",
@@ -147,7 +266,23 @@ def main():
     # TODO 6-2: try/finally 로 감싸고, 순서대로 호출한다. finally 에서 driver.close().
     #   순서: clear_database -> create_constraints -> 노드 4종 -> 관계 4종 -> print_graph_statistics
     #   (왜 노드가 먼저, 관계가 나중일까? 직접 순서를 바꿔 실행해 보면 바로 알 수 있다.)
-    ...
+    try:
+        clear_database(driver)
+        create_constraints(driver)
+        
+        load_passenger_nodes(driver, csv_files["passenger"])
+        load_pclass_nodes(driver, csv_files["pclass"])
+        load_cabin_nodes(driver, csv_files["cabin"])
+        load_port_nodes(driver, csv_files["port"])
+        
+        create_traveled_in_relationships(driver, csv_files["rel_pclass"])
+        create_stayed_in_relationships(driver, csv_files["rel_cabin"])
+        create_embarked_at_relationships(driver, csv_files["rel_port"])
+        create_traveled_with_relationships(driver, csv_files["rel_traveled"])
+        
+        print_graph_statistics(driver)
+    finally:
+        driver.close()
 
 
 if __name__ == "__main__":
