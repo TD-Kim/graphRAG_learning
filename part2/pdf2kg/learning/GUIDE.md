@@ -5,8 +5,8 @@
 | 파일 | 줄 | 하는 일 | 학습 파일 |
 |---|---|---|---|
 | [`toc_extract.py`](../toc_extract.py) | 125 | docling 계층 복원 전/후 비교 실험 | `step1_annotated.py`, `step2_fill_in.py` |
-| [`pdf2kg.py`](../pdf2kg.py) | 638 | **Stage 1**: PDF → 문서 구조 그래프 (Document, TOC, Chunk, Element) | 이 가이드, `step3_comments_only.py` |
-| [`pdf2kg_2.py`](../pdf2kg_2.py) | 581 | **Stage 2**: Chunk → LLM 이 설계한 스키마로 도메인 엔티티/관계 | 이 가이드, `step2_domain_fill_in.py` |
+| [`pdf2kg.py`](../pdf2kg.py) | 638 | **Stage 1**: PDF → 문서 구조 그래프 (Document, TOC, Chunk, Element) | `step1_pdf2kg_annotated.py`, `step3_comments_only.py` |
+| [`pdf2kg_2.py`](../pdf2kg_2.py) | 581 | **Stage 2**: Chunk → LLM 이 설계한 스키마로 도메인 엔티티/관계 | `step1_pdf2kg_2_annotated.py`, `step2_domain_fill_in.py` |
 
 ## 한눈에 보기
 

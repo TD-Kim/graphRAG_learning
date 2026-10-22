@@ -1243,7 +1243,7 @@ def build_interpretation_graph(driver, api_key: str, max_interpretations: int = 
             interp_id = interp_summary.get('법령해석례일련번호') or interp_summary.get('MST')
             title = interp_summary.get('안건명') or interp_summary.get('제목')
 
-            # 주의: 이 줄의 len(interpretations) 는 마지막 검색 결과의 개수다. len(all_interpretations) 가 맞다
+            # 주의: 아래 print 의 len(interpretations) 는 마지막 검색 결과의 개수다. len(all_interpretations) 가 맞다
             # (앞에서 interp_id 없는 것은 걸러졌으므로 이 줄이 실행될 일은 거의 없다)
             if not interp_id:
                 print(f"[{idx}/{len(interpretations)}] SKIP: 해석례일련번호가 없습니다.")

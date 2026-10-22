@@ -7,11 +7,11 @@
 | 파일 | 하는 일 |
 |---|---|
 | `GUIDE.md` | 원본 코드를 옆에 열고 읽는 안내서: 한눈에 보기, 읽는 순서, 함수별 "왜", **생각해 볼 점**(실제 코드의 약점 포함) |
-| `step1_annotated.py` | (part1, csv2kg, toc_extract 만) 원본에 "왜" 주석을 단 복사본 |
+| `step1_*annotated.py` | 원본과 코드는 같고 주석만 단 복사본. Part 2 는 파이썬 문법과 함수의 **[출처] [입력] [반환] [왜]** 까지 적었다 (part1, Part 2 전체) |
 | `step2_*.py` | 핵심 함수만 TODO 로 비워 둔 빈칸 채우기. 원본이 정답 |
 | `step3_comments_only.py` | 할 일 목록만 있는 과제. 대부분 **다른 데이터나 도메인에 같은 패턴을 적용**하는 과제 |
 
-**권장 순서**: GUIDE 읽기 → 원본 실행 → step2 → step3. GUIDE 의 "생각해 볼 점"은 면접 질문 연습으로도 좋습니다.
+**권장 순서**: GUIDE 읽기 → step1 주석본 읽기 → 원본 실행 → step2 → step3. GUIDE 의 "생각해 볼 점"은 면접 질문 연습으로도 좋습니다.
 
 ## Part 1. GraphDB 와 Neo4j 기초
 
@@ -23,12 +23,12 @@
 
 | 순서 | 폴더 | 주제 | 가이드 |
 |---|---|---|---|
-| 1 | `part2/txt2kg` | 텍스트 → LLM 추출 → 그래프 | [GUIDE](part2/txt2kg/learning/GUIDE.md) |
+| 1 | `part2/txt2kg` | 텍스트 → LLM 추출 → 그래프 | [GUIDE](part2/txt2kg/learning/GUIDE.md) · [step1](part2/txt2kg/learning/step1_annotated.py) |
 | 2 | `part2/csv2kg` | CSV → 그래프 (배치 적재) | [step1](part2/csv2kg/learning/step1_annotated.py) |
-| 3 | `part2/pdf2kg` | PDF 목차/본문 구조 + LLM 스키마 기반 도메인 그래프 | [GUIDE](part2/pdf2kg/learning/GUIDE.md) |
-| 4 | `part2/law2kg` | 법령 Open API + 해석례 연결 | [GUIDE](part2/law2kg/learning/GUIDE.md) |
-| 5 | `part2/retail2kg` | 대용량 구매 이력 적재 | [GUIDE](part2/retail2kg/learning/GUIDE.md) |
-| 6 | `part2/medical2kg` | 스키마 JSON + 코드 검증 + 관계 누적 | [GUIDE](part2/medical2kg/learning/GUIDE.md) |
+| 3 | `part2/pdf2kg` | PDF 목차/본문 구조 + LLM 스키마 기반 도메인 그래프 | [GUIDE](part2/pdf2kg/learning/GUIDE.md) · step1: [toc_extract](part2/pdf2kg/learning/step1_annotated.py), [pdf2kg](part2/pdf2kg/learning/step1_pdf2kg_annotated.py), [pdf2kg_2](part2/pdf2kg/learning/step1_pdf2kg_2_annotated.py) |
+| 4 | `part2/law2kg` | 법령 Open API + 해석례 연결 | [GUIDE](part2/law2kg/learning/GUIDE.md) · step1: [law_api](part2/law2kg/learning/step1_law_api_annotated.py), [law2kg](part2/law2kg/learning/step1_law2kg_annotated.py), [load_laws](part2/law2kg/learning/step1_load_laws_annotated.py), [link_interpretations](part2/law2kg/learning/step1_link_interpretations_annotated.py) |
+| 5 | `part2/retail2kg` | 대용량 구매 이력 적재 | [GUIDE](part2/retail2kg/learning/GUIDE.md) · [step1](part2/retail2kg/learning/step1_annotated.py) |
+| 6 | `part2/medical2kg` | 스키마 JSON + 코드 검증 + 관계 누적 | [GUIDE](part2/medical2kg/learning/GUIDE.md) · [step1](part2/medical2kg/learning/step1_annotated.py) |
 
 ## Part 3. GraphRAG 핵심 패턴과 평가
 
