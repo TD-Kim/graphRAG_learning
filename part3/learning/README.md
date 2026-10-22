@@ -1,19 +1,30 @@
-# Part 3 학습 골격 (GraphRAG 핵심 패턴과 평가)
+# Part 3 종합 과제 (GraphRAG 핵심 패턴과 평가)
 
-이 저장소에는 아직 파트 3 코드가 없어서, **원본 정답이 없는 주석 골격**만 준비했습니다.
-강의 영상/자료를 보고 직접 구현하세요. 막히는 곳이 복습 포인트입니다.
+Part 3 의 각 실습 폴더에는 `learning/` (GUIDE.md, step2, step3) 가 있습니다. 먼저 그쪽을 순서대로 하세요.
+이 폴더의 파일 3개는 **Part 3 을 다 끝낸 뒤, 원본을 보지 않고 처음부터** 해 보는 종합 과제입니다.
 
-| 파일 | 강의 대응 (커리큘럼 03) | 핵심 질문 |
-|---|---|---|
-| `step3_text2cypher.py` | CH01-02, 03, 04 Text2Cypher | LLM 이 만든 Cypher 를 어떻게 믿고 실행할 것인가 |
-| `step3_hybrid_retrieval.py` | CH01-05, 06, 07, 09 벡터 + 그래프 | 의미 검색 결과에서 그래프로 어떻게 확장하는가 |
-| `step3_evaluation.py` | CH02 RAGAS 평가 | "좋아졌다"를 숫자로 어떻게 말하는가 |
+## 실습 폴더 순서
 
-## 진행 순서
-1. 파트 2 의 `pdf2kg` 결과(문서/목차/청크 그래프)나 `csv2kg` 결과(타이타닉)를 데이터로 쓴다.
-2. 위 순서대로 파일을 채운다.
-3. 각 파일 맨 아래 "스스로 점검"에 답할 수 있으면 다음으로 넘어간다.
+| 순서 | 폴더 | 강의 | 핵심 |
+|---|---|---|---|
+| 1 | [`vectorsearch/`](../vectorsearch/learning/GUIDE.md) | CH01-05 | 임베딩, 벡터 인덱스, 의미 검색 |
+| 2 | [`text2cypher/`](../text2cypher/learning/GUIDE.md) | CH01-01, 02 | 질문 → Cypher → 실행 → 답변 |
+| 3 | [`reasoning/`](../reasoning/learning/GUIDE.md) | CH01-03, 04 | 추론 경로를 따라가는 Text2Cypher |
+| 4 | [`vectorcypher/`](../vectorcypher/learning/GUIDE.md) | CH01-06 | 벡터로 시작 노드, Cypher 로 주변 |
+| 5 | [`vectorcypher_qdrant/`](../vectorcypher_qdrant/learning/GUIDE.md) | CH01-07 | 외부 벡터 DB + 그래프 |
+| 6 | [`community_search/`](../community_search/learning/GUIDE.md) | CH01-08 | GDS Leiden 커뮤니티 |
+| 7 | [`toolsretriever/`](../toolsretriever/learning/GUIDE.md) | CH01-09 | 검색 방식을 LLM 이 골라 쓰기 |
+| 8 | [`evaluation/ragas/`](../evaluation/ragas/learning/GUIDE.md) | CH02-01, 02 | RAGAS 5개 지표 |
+| 9 | [`evaluation/neo4j_text2cypher/`](../evaluation/neo4j_text2cypher/learning/GUIDE.md) | CH02-03 | 골든셋, 실행 평가, LLM Judge |
+
+## 종합 과제
+
+| 파일 | 하는 일 |
+|---|---|
+| `step3_text2cypher.py` | 새 그래프에 Text2Cypher 를 붙이고 안전장치까지 |
+| `step3_hybrid_retrieval.py` | 임베딩 단위를 바꿔 가며 벡터 + 그래프 확장 비교 |
+| `step3_evaluation.py` | 직접 만든 평가셋으로 여러 방식 비교 |
 
 ## 주의
 - 라이브러리 API(`neo4j-graphrag`, `ragas` 등)는 버전에 따라 바뀌므로, 코드를 쓰기 전에 설치된 버전의 공식 문서를 먼저 확인한다.
-- LLM 키(`OPENAI_API_KEY`)는 `.env` 에만 두고 커밋하지 않는다.
+- **API 키는 `.env` 에만 둔다.** README, 노트북 출력, 커밋에 남기지 않는다.

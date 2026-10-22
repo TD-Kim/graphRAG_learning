@@ -15,7 +15,7 @@
   RETURN ai.text.embed(
   "이 문장을 임베딩 합니다.",
   "openai",
-  {token: "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",
+  {token: "sk-your_openai_api_key_here",
   model: "text-embedding-3-small"}
   ) AS embedding;
 
