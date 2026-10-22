@@ -1,0 +1,58 @@
+{
+  "entity_types": {
+    "Symptom": [
+      "기침",
+      "숨이 참",
+      "가래",
+      "불편감"
+    ],
+    "Disease": [
+      "재생불량빈혈",
+      "자궁근종",
+      "난소 낭종",
+      "제한성 폐질환"
+    ],
+    "Test": [
+      "메타콜린 기관지유발검사",
+      "가슴 컴퓨터단층촬영",
+      "골반 초음파",
+      "폐기능검사"
+    ],
+    "Treatment": [
+      "글루코코르티코이드 치료",
+      "항생제 투여",
+      "기관지확장제 사용"
+    ],
+    "Medication": [
+      "속효성 베타2 작용제",
+      "항히스타민제"
+    ],
+    "Anatomy": [
+      "자궁",
+      "난소",
+      "폐"
+    ]
+  },
+  "relationships": [
+    {
+      "from": "Symptom",
+      "to": "Disease",
+      "type": "INDICATES"
+    },
+    {
+      "from": "Test",
+      "to": "Disease",
+      "type": "DIAGNOSES_FOR"
+    },
+    {
+      "from": "Treatment",
+      "to": "Disease",
+      "type": "TREATS"
+    },
+    {
+      "from": "Medication",
+      "to": "Disease",
+      "type": "TREATS"
+    }
+  ]
+}

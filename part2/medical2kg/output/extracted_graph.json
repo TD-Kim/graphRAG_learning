@@ -1,0 +1,5914 @@
+{
+  "11": {
+    "entities": [
+      {
+        "name": "기침",
+        "type": "symptom"
+      },
+      {
+        "name": "천식",
+        "type": "disease"
+      },
+      {
+        "name": "메타콜린 기관지유발검사",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "기침",
+        "from_type": "symptom",
+        "to": "천식",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 기침으로 내원"
+      },
+      {
+        "from": "메타콜린 기관지유발검사",
+        "from_type": "test",
+        "to": "천식",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "다음으로 시행해야 할 검사"
+      }
+    ]
+  },
+  "110": {
+    "entities": [
+      {
+        "name": "기침",
+        "type": "symptom"
+      },
+      {
+        "name": "제한성 폐질환",
+        "type": "disease"
+      },
+      {
+        "name": "글루코코르티코이드",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "기침",
+        "from_type": "symptom",
+        "to": "제한성 폐질환",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 6개월 동안 지속된 기침으로 내원"
+      },
+      {
+        "from": "글루코코르티코이드",
+        "from_type": "treatment",
+        "to": "제한성 폐질환",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "이 환자에게 적절한 치료는 글루코코르티코이드 치료"
+      }
+    ]
+  },
+  "1100": {
+    "entities": [
+      {
+        "name": "재생불량빈혈",
+        "type": "disease"
+      },
+      {
+        "name": "절대 호중구 수",
+        "type": "symptom"
+      },
+      {
+        "name": "혈소판",
+        "type": "symptom"
+      },
+      {
+        "name": "교정 망상구 수",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "절대 호중구 수",
+        "from_type": "symptom",
+        "to": "재생불량빈혈",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "중증 기준에 해당하는 절대 호중구 수"
+      },
+      {
+        "from": "혈소판",
+        "from_type": "symptom",
+        "to": "재생불량빈혈",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "중증 기준에 해당하는 혈소판 수치"
+      },
+      {
+        "from": "교정 망상구 수",
+        "from_type": "symptom",
+        "to": "재생불량빈혈",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "중증 기준에 해당하는 교정 망상구 수"
+      }
+    ]
+  },
+  "1101": {
+    "entities": [
+      {
+        "name": "양쪽 다리에 멍",
+        "type": "symptom"
+      },
+      {
+        "name": "코피",
+        "type": "symptom"
+      },
+      {
+        "name": "피로",
+        "type": "symptom"
+      },
+      {
+        "name": "두통",
+        "type": "symptom"
+      },
+      {
+        "name": "혈소판 감소증",
+        "type": "disease"
+      },
+      {
+        "name": "삼중면역억제치료",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "양쪽 다리에 멍",
+        "from_type": "symptom",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 양쪽 다리에 멍이 들어 내원"
+      },
+      {
+        "from": "코피",
+        "from_type": "symptom",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "평소에 코피가 잘 나는 편"
+      },
+      {
+        "from": "피로",
+        "from_type": "symptom",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "2주 전부터 쉽게 피로하고"
+      },
+      {
+        "from": "두통",
+        "from_type": "symptom",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "두통이 있다고 한다"
+      },
+      {
+        "from": "삼중면역억제치료",
+        "from_type": "treatment",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "이 환자의 치료로 적절한 것은 삼중면역억제치료"
+      }
+    ]
+  },
+  "1106": {
+    "entities": [
+      {
+        "name": "다리 멍",
+        "type": "symptom"
+      },
+      {
+        "name": "손목 붓기",
+        "type": "symptom"
+      },
+      {
+        "name": "손목 통증",
+        "type": "symptom"
+      },
+      {
+        "name": "폐색전증",
+        "type": "disease"
+      },
+      {
+        "name": "헤파린",
+        "type": "medication"
+      },
+      {
+        "name": "헤파린 과다 투여",
+        "type": "disease"
+      },
+      {
+        "name": "프로타민설페이트",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "다리 멍",
+        "from_type": "symptom",
+        "to": "헤파린 과다 투여",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 쉽게 멍이 드는 증상이 나타났다"
+      },
+      {
+        "from": "손목 붓기",
+        "from_type": "symptom",
+        "to": "헤파린 과다 투여",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "손목에 붓기와 통증을 느껴 내원했다"
+      },
+      {
+        "from": "손목 통증",
+        "from_type": "symptom",
+        "to": "헤파린 과다 투여",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "손목에 붓기와 통증을 느껴 내원했다"
+      },
+      {
+        "from": "헤파린",
+        "from_type": "medication",
+        "to": "헤파린 과다 투여",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "헤파린 피하주사로 치료 중이었다"
+      },
+      {
+        "from": "프로타민설페이트",
+        "from_type": "treatment",
+        "to": "헤파린 과다 투여",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "적절한 치료는 프로타민설페이트"
+      }
+    ]
+  },
+  "1107": {
+    "entities": [
+      {
+        "name": "심방세동",
+        "type": "disease"
+      },
+      {
+        "name": "와파린",
+        "type": "medication"
+      },
+      {
+        "name": "혈종",
+        "type": "symptom"
+      },
+      {
+        "name": "잇몸 출혈",
+        "type": "symptom"
+      },
+      {
+        "name": "프로트롬빈시간(PT/INR)",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "혈종",
+        "from_type": "symptom",
+        "to": "심방세동",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "팔에 큰 멍이 생겨 내원하였다"
+      },
+      {
+        "from": "잇몸 출혈",
+        "from_type": "symptom",
+        "to": "심방세동",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자는 최근 잇몸에서 피가 자주 난다고 호소하였다"
+      },
+      {
+        "from": "와파린",
+        "from_type": "medication",
+        "to": "심방세동",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "환자는 5년 전 심방세동으로 진단받아 와파린을 꾸준히 복용하고 있었다"
+      },
+      {
+        "from": "프로트롬빈시간(PT/INR)",
+        "from_type": "test",
+        "to": "심방세동",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "가장 먼저 시행해야 할 검사"
+      }
+    ]
+  },
+  "1108": {
+    "entities": [
+      {
+        "name": "멍",
+        "type": "symptom"
+      },
+      {
+        "name": "혈소판 감소증",
+        "type": "disease"
+      },
+      {
+        "name": "글루코코르티코이드",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "멍",
+        "from_type": "symptom",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 멍으로 내원"
+      },
+      {
+        "from": "글루코코르티코이드",
+        "from_type": "treatment",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "가장 적절한 치료는 글루코코르티코이드"
+      }
+    ]
+  },
+  "111": {
+    "entities": [
+      {
+        "name": "숨이 차다",
+        "type": "symptom"
+      },
+      {
+        "name": "기침",
+        "type": "symptom"
+      },
+      {
+        "name": "기관지폐포세척",
+        "type": "test"
+      },
+      {
+        "name": "폐렴",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "숨이 차다",
+        "from_type": "symptom",
+        "to": "폐렴",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "28세 여자가 숨이 차서 내원"
+      },
+      {
+        "from": "기침",
+        "from_type": "symptom",
+        "to": "폐렴",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "1주 전부터 기침이 있었으나"
+      },
+      {
+        "from": "기관지폐포세척",
+        "from_type": "test",
+        "to": "폐렴",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "이 환자에서 진단을 위해 가장 적절한 검사"
+      }
+    ]
+  },
+  "1110": {
+    "entities": [
+      {
+        "name": "토혈",
+        "type": "symptom"
+      },
+      {
+        "name": "출혈장애",
+        "type": "disease"
+      },
+      {
+        "name": "데스모프레신",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "토혈",
+        "from_type": "symptom",
+        "to": "출혈장애",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 반복되는 토혈로 내원"
+      },
+      {
+        "from": "데스모프레신",
+        "from_type": "medication",
+        "to": "출혈장애",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "가장 적절한 치료는 데스모프레신"
+      }
+    ]
+  },
+  "1111": {
+    "entities": [
+      {
+        "name": "출혈",
+        "type": "symptom"
+      },
+      {
+        "name": "혈우병",
+        "type": "disease"
+      },
+      {
+        "name": "VIII 인자",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "출혈",
+        "from_type": "symptom",
+        "to": "혈우병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 출혈로 내원"
+      },
+      {
+        "from": "VIII 인자",
+        "from_type": "medication",
+        "to": "혈우병",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "출혈을 치료하기 위해 VIII 인자 투여"
+      }
+    ]
+  },
+  "1112": {
+    "entities": [
+      {
+        "name": "토혈",
+        "type": "symptom"
+      },
+      {
+        "name": "간경화증",
+        "type": "disease"
+      },
+      {
+        "name": "신선냉동혈장",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "토혈",
+        "from_type": "symptom",
+        "to": "간경화증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 토혈로 내원"
+      },
+      {
+        "from": "신선냉동혈장",
+        "from_type": "treatment",
+        "to": "간경화증",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "신선냉동혈장 수혈"
+      }
+    ]
+  },
+  "1113": {
+    "entities": [
+      {
+        "name": "발열",
+        "type": "symptom"
+      },
+      {
+        "name": "출혈점",
+        "type": "symptom"
+      },
+      {
+        "name": "자색반",
+        "type": "symptom"
+      },
+      {
+        "name": "황달",
+        "type": "symptom"
+      },
+      {
+        "name": "분열적혈구",
+        "type": "symptom"
+      },
+      {
+        "name": "혈소판 감소증",
+        "type": "disease"
+      },
+      {
+        "name": "혈장교환술",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "발열",
+        "from_type": "symptom",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 발열로 내원"
+      },
+      {
+        "from": "출혈점",
+        "from_type": "symptom",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "전신에 출혈점 관찰"
+      },
+      {
+        "from": "자색반",
+        "from_type": "symptom",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "자색반 관찰"
+      },
+      {
+        "from": "황달",
+        "from_type": "symptom",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "공막 황달 소견"
+      },
+      {
+        "from": "분열적혈구",
+        "from_type": "symptom",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "혈액 검사에서 분열적혈구 관찰"
+      },
+      {
+        "from": "혈장교환술",
+        "from_type": "treatment",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "적절한 치료로 혈장교환술"
+      }
+    ]
+  },
+  "1114": {
+    "entities": [
+      {
+        "name": "창백",
+        "type": "symptom"
+      },
+      {
+        "name": "소변량 감소",
+        "type": "symptom"
+      },
+      {
+        "name": "발열",
+        "type": "symptom"
+      },
+      {
+        "name": "혈변",
+        "type": "symptom"
+      },
+      {
+        "name": "용혈요독증후군",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "창백",
+        "from_type": "symptom",
+        "to": "용혈요독증후군",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 창백으로 내원"
+      },
+      {
+        "from": "소변량 감소",
+        "from_type": "symptom",
+        "to": "용혈요독증후군",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "소변량이 줄어들어 내원"
+      },
+      {
+        "from": "발열",
+        "from_type": "symptom",
+        "to": "용혈요독증후군",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "1주 전부터 발열이 있었음"
+      },
+      {
+        "from": "혈변",
+        "from_type": "symptom",
+        "to": "용혈요독증후군",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "1주 전부터 혈변이 있었음"
+      }
+    ]
+  },
+  "1115": {
+    "entities": [
+      {
+        "name": "혈변",
+        "type": "symptom"
+      },
+      {
+        "name": "다발성 골절",
+        "type": "disease"
+      },
+      {
+        "name": "출혈",
+        "type": "symptom"
+      },
+      {
+        "name": "혈소판 감소증",
+        "type": "disease"
+      },
+      {
+        "name": "혈소판 농축액",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "혈변",
+        "from_type": "symptom",
+        "to": "다발성 골절",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "입원 5일째 혈변을 보기 시작"
+      },
+      {
+        "from": "출혈",
+        "from_type": "symptom",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "중심정맥관 삽입 부위에 출혈이 생겼다"
+      },
+      {
+        "from": "혈소판 농축액",
+        "from_type": "treatment",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "가장 적절한 조치는 혈소판 농축액"
+      }
+    ]
+  },
+  "1116": {
+    "entities": [
+      {
+        "name": "잇몸 출혈",
+        "type": "symptom"
+      },
+      {
+        "name": "PML-RARA 양성",
+        "type": "disease"
+      },
+      {
+        "name": "트레티노인",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "잇몸 출혈",
+        "from_type": "symptom",
+        "to": "PML-RARA 양성",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 잇몸에서 피가 난다며 내원"
+      },
+      {
+        "from": "트레티노인",
+        "from_type": "medication",
+        "to": "PML-RARA 양성",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "이 환자에게 가장 적합한 초기 치료는 트레티노인"
+      }
+    ]
+  },
+  "1117": {
+    "entities": [
+      {
+        "name": "조기 포만감",
+        "type": "symptom"
+      },
+      {
+        "name": "좌측 상복부 불편감",
+        "type": "symptom"
+      },
+      {
+        "name": "체중 감소",
+        "type": "symptom"
+      },
+      {
+        "name": "열감",
+        "type": "symptom"
+      },
+      {
+        "name": "땀",
+        "type": "symptom"
+      },
+      {
+        "name": "비장 비대",
+        "type": "symptom"
+      },
+      {
+        "name": "백혈병",
+        "type": "disease"
+      },
+      {
+        "name": "BCR-ABL1 재배열",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "조기 포만감",
+        "from_type": "symptom",
+        "to": "백혈병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "식후 조기 포만감으로 내원"
+      },
+      {
+        "from": "좌측 상복부 불편감",
+        "from_type": "symptom",
+        "to": "백혈병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "좌측 상복부 불편감으로 내원"
+      },
+      {
+        "from": "체중 감소",
+        "from_type": "symptom",
+        "to": "백혈병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "체중이 2kg 감소되었다고 한다"
+      },
+      {
+        "from": "열감",
+        "from_type": "symptom",
+        "to": "백혈병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "밤에 열감이 있고"
+      },
+      {
+        "from": "땀",
+        "from_type": "symptom",
+        "to": "백혈병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "땀이 많이 났다"
+      },
+      {
+        "from": "비장 비대",
+        "from_type": "symptom",
+        "to": "백혈병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "비장이 갈비뼈 아래 5cm 촉지되었다"
+      },
+      {
+        "from": "BCR-ABL1 재배열",
+        "from_type": "test",
+        "to": "백혈병",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "진단에 필요한 검사"
+      }
+    ]
+  },
+  "112": {
+    "entities": [
+      {
+        "name": "숨이 차고 기침",
+        "type": "symptom"
+      },
+      {
+        "name": "고열",
+        "type": "symptom"
+      },
+      {
+        "name": "폐렴",
+        "type": "disease"
+      },
+      {
+        "name": "세포탁심",
+        "type": "medication"
+      },
+      {
+        "name": "아지트로마이신",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "숨이 차고 기침",
+        "from_type": "symptom",
+        "to": "폐렴",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 숨이 차고 기침으로 내원"
+      },
+      {
+        "from": "고열",
+        "from_type": "symptom",
+        "to": "폐렴",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 고열로 내원"
+      },
+      {
+        "from": "세포탁심",
+        "from_type": "medication",
+        "to": "폐렴",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "세포탁심으로 치료"
+      },
+      {
+        "from": "아지트로마이신",
+        "from_type": "medication",
+        "to": "폐렴",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "아지트로마이신으로 치료"
+      }
+    ]
+  },
+  "1120": {
+    "entities": [
+      {
+        "name": "목의 덩이",
+        "type": "symptom"
+      },
+      {
+        "name": "림프절절제생검",
+        "type": "test"
+      },
+      {
+        "name": "림프절암",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "목의 덩이",
+        "from_type": "symptom",
+        "to": "림프절암",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "목에서 덩이가 만져져 병원에 내원"
+      },
+      {
+        "from": "림프절절제생검",
+        "from_type": "test",
+        "to": "림프절암",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "가장 적절한 진단을 위한 검사"
+      }
+    ]
+  },
+  "1122": {
+    "entities": [
+      {
+        "name": "발열",
+        "type": "symptom"
+      },
+      {
+        "name": "오한",
+        "type": "symptom"
+      },
+      {
+        "name": "림프절 비대",
+        "type": "disease"
+      },
+      {
+        "name": "림프절 절제 생검",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "발열",
+        "from_type": "symptom",
+        "to": "림프절 비대",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 발열로 내원"
+      },
+      {
+        "from": "오한",
+        "from_type": "symptom",
+        "to": "림프절 비대",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 오한으로 내원"
+      },
+      {
+        "from": "림프절 절제 생검",
+        "from_type": "test",
+        "to": "림프절 비대",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "확진을 위한 가장 적절한 검사"
+      }
+    ]
+  },
+  "1123": {
+    "entities": [
+      {
+        "name": "안면홍조",
+        "type": "symptom"
+      },
+      {
+        "name": "전신 가려움증",
+        "type": "symptom"
+      },
+      {
+        "name": "두통",
+        "type": "symptom"
+      },
+      {
+        "name": "손발 저림",
+        "type": "symptom"
+      },
+      {
+        "name": "적혈구형성인자 감소",
+        "type": "symptom"
+      },
+      {
+        "name": "JAK2V617F 돌연변이",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1124": {
+    "entities": [
+      {
+        "name": "피부 가려움",
+        "type": "symptom"
+      },
+      {
+        "name": "홍조",
+        "type": "symptom"
+      },
+      {
+        "name": "비장 비대",
+        "type": "symptom"
+      },
+      {
+        "name": "다혈증",
+        "type": "disease"
+      },
+      {
+        "name": "사혈",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "피부 가려움",
+        "from_type": "symptom",
+        "to": "다혈증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 피부가 따갑고 가려움을 호소"
+      },
+      {
+        "from": "홍조",
+        "from_type": "symptom",
+        "to": "다혈증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "내원 당시 얼굴은 홍조를 띠고 있었음"
+      },
+      {
+        "from": "비장 비대",
+        "from_type": "symptom",
+        "to": "다혈증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "왼쪽 갈비 밑으로 비장이 3cm 촉진됨"
+      },
+      {
+        "from": "사혈",
+        "from_type": "treatment",
+        "to": "다혈증",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "적절한 치료로 사혈이 제시됨"
+      }
+    ]
+  },
+  "1125": {
+    "entities": [
+      {
+        "name": "요통",
+        "type": "symptom"
+      },
+      {
+        "name": "요추 압박골절",
+        "type": "disease"
+      },
+      {
+        "name": "혈청단백질전기이동",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "요통",
+        "from_type": "symptom",
+        "to": "요추 압박골절",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "60세 남자가 심한 요통으로 내원하였다."
+      },
+      {
+        "from": "혈청단백질전기이동",
+        "from_type": "test",
+        "to": "요추 압박골절",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "이 환자에서 추가로 시행해야 할 검사"
+      }
+    ]
+  },
+  "1127": {
+    "entities": [
+      {
+        "name": "허리 통증",
+        "type": "symptom"
+      },
+      {
+        "name": "유방암",
+        "type": "disease"
+      },
+      {
+        "name": "옥시코돈 지속성 진통제",
+        "type": "medication"
+      },
+      {
+        "name": "옥시코돈 속효성 제제",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "허리 통증",
+        "from_type": "symptom",
+        "to": "유방암",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "허리 통증을 호소하며 내원"
+      },
+      {
+        "from": "옥시코돈 지속성 진통제",
+        "from_type": "medication",
+        "to": "유방암",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "통증 조절을 위해 옥시코돈 지속성 진통제를 복용 중"
+      },
+      {
+        "from": "옥시코돈 속효성 제제",
+        "from_type": "medication",
+        "to": "유방암",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "돌발 통증 관리를 위한 처치로 옥시코돈 속효성 제제 추가"
+      }
+    ]
+  },
+  "1128": {
+    "entities": [
+      {
+        "name": "소변 감소",
+        "type": "symptom"
+      },
+      {
+        "name": "췌장암",
+        "type": "disease"
+      },
+      {
+        "name": "종양융해증후군",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "소변 감소",
+        "from_type": "symptom",
+        "to": "종양융해증후군",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 소변이 잘 나오지 않는다고 내원"
+      }
+    ]
+  },
+  "1129": {
+    "entities": [
+      {
+        "name": "얼굴 붓기",
+        "type": "symptom"
+      },
+      {
+        "name": "숨이 찬 증상",
+        "type": "symptom"
+      },
+      {
+        "name": "폐 선암",
+        "type": "disease"
+      },
+      {
+        "name": "방사선치료",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "얼굴 붓기",
+        "from_type": "symptom",
+        "to": "폐 선암",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 얼굴이 붓고 숨이 찬 증상으로 내원"
+      },
+      {
+        "from": "숨이 찬 증상",
+        "from_type": "symptom",
+        "to": "폐 선암",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 얼굴이 붓고 숨이 찬 증상으로 내원"
+      },
+      {
+        "from": "방사선치료",
+        "from_type": "treatment",
+        "to": "폐 선암",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "적절한 치료는 방사선치료"
+      }
+    ]
+  },
+  "113": {
+    "entities": [
+      {
+        "name": "열",
+        "type": "symptom"
+      },
+      {
+        "name": "기침",
+        "type": "symptom"
+      },
+      {
+        "name": "가래",
+        "type": "symptom"
+      },
+      {
+        "name": "흡인 폐렴",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "열",
+        "from_type": "symptom",
+        "to": "흡인 폐렴",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 열이 나고 기침과 가래가 지속됨"
+      },
+      {
+        "from": "기침",
+        "from_type": "symptom",
+        "to": "흡인 폐렴",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 열이 나고 기침과 가래가 지속됨"
+      },
+      {
+        "from": "가래",
+        "from_type": "symptom",
+        "to": "흡인 폐렴",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 열이 나고 기침과 가래가 지속됨"
+      }
+    ]
+  },
+  "1130": {
+    "entities": [
+      {
+        "name": "기운 없음",
+        "type": "symptom"
+      },
+      {
+        "name": "난소암 4기",
+        "type": "disease"
+      },
+      {
+        "name": "비스포스포네이트",
+        "type": "medication"
+      },
+      {
+        "name": "전이",
+        "type": "disease"
+      },
+      {
+        "name": "건조한 피부",
+        "type": "symptom"
+      },
+      {
+        "name": "마른 혀",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "기운 없음",
+        "from_type": "symptom",
+        "to": "난소암 4기",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 기운이 없음으로 내원"
+      },
+      {
+        "from": "비스포스포네이트",
+        "from_type": "medication",
+        "to": "난소암 4기",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "적절한 치료는 비스포스포네이트"
+      }
+    ]
+  },
+  "1131": {
+    "entities": [
+      {
+        "name": "발진",
+        "type": "symptom"
+      },
+      {
+        "name": "알레르기 접촉 피부염",
+        "type": "disease"
+      },
+      {
+        "name": "첩포검사",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "발진",
+        "from_type": "symptom",
+        "to": "알레르기 접촉 피부염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 발진으로 내원"
+      },
+      {
+        "from": "첩포검사",
+        "from_type": "test",
+        "to": "알레르기 접촉 피부염",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "가장 적절한 진단을 위한 검사"
+      }
+    ]
+  },
+  "1132": {
+    "entities": [
+      {
+        "name": "두드러기",
+        "type": "symptom"
+      },
+      {
+        "name": "알레르기",
+        "type": "disease"
+      },
+      {
+        "name": "피부바늘따끔검사",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "두드러기",
+        "from_type": "symptom",
+        "to": "알레르기",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 두드러기로 내원"
+      },
+      {
+        "from": "피부바늘따끔검사",
+        "from_type": "test",
+        "to": "알레르기",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "진단을 위한 검사"
+      }
+    ]
+  },
+  "1133": {
+    "entities": [
+      {
+        "name": "저혈압",
+        "type": "symptom"
+      },
+      {
+        "name": "두드러기",
+        "type": "symptom"
+      },
+      {
+        "name": "벌에 쏘임",
+        "type": "disease"
+      },
+      {
+        "name": "에피네프린",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "저혈압",
+        "from_type": "symptom",
+        "to": "벌에 쏘임",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "혈압은 80/40mmHg로 저혈압 상태"
+      },
+      {
+        "from": "두드러기",
+        "from_type": "symptom",
+        "to": "벌에 쏘임",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "전신에 두드러기가 관찰되었다"
+      },
+      {
+        "from": "에피네프린",
+        "from_type": "medication",
+        "to": "벌에 쏘임",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "가장 우선적으로 시행해야 할 처치"
+      }
+    ]
+  },
+  "1135": {
+    "entities": [
+      {
+        "name": "온몸 두드러기",
+        "type": "symptom"
+      },
+      {
+        "name": "현기증",
+        "type": "symptom"
+      },
+      {
+        "name": "아나필락시스",
+        "type": "disease"
+      },
+      {
+        "name": "혈청 트립타제 검사",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "온몸 두드러기",
+        "from_type": "symptom",
+        "to": "아나필락시스",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 온몸 두드러기와 현기증을 호소"
+      },
+      {
+        "from": "현기증",
+        "from_type": "symptom",
+        "to": "아나필락시스",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 온몸 두드러기와 현기증을 호소"
+      },
+      {
+        "from": "혈청 트립타제 검사",
+        "from_type": "test",
+        "to": "아나필락시스",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "현재 상태의 원인을 파악하기 위해 가장 적절한 검사"
+      }
+    ]
+  },
+  "1137": {
+    "entities": [
+      {
+        "name": "발진",
+        "type": "symptom"
+      },
+      {
+        "name": "콜린성 두드러기",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "발진",
+        "from_type": "symptom",
+        "to": "콜린성 두드러기",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "10세 남아가 피부에 발진이 생겨 내원했다."
+      }
+    ]
+  },
+  "114": {
+    "entities": [
+      {
+        "name": "열",
+        "type": "symptom"
+      },
+      {
+        "name": "기침",
+        "type": "symptom"
+      },
+      {
+        "name": "누런 가래",
+        "type": "symptom"
+      },
+      {
+        "name": "폐렴",
+        "type": "disease"
+      },
+      {
+        "name": "세프트리악손",
+        "type": "medication"
+      },
+      {
+        "name": "클린다마이신",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "열",
+        "from_type": "symptom",
+        "to": "폐렴",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 열이 나고 기침, 누런 가래가 있어 내원했다"
+      },
+      {
+        "from": "기침",
+        "from_type": "symptom",
+        "to": "폐렴",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 열이 나고 기침, 누런 가래가 있어 내원했다"
+      },
+      {
+        "from": "누런 가래",
+        "from_type": "symptom",
+        "to": "폐렴",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 열이 나고 기침, 누런 가래가 있어 내원했다"
+      },
+      {
+        "from": "세프트리악손",
+        "from_type": "medication",
+        "to": "폐렴",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "적절한 치료는 세프트리악손 + 클린다마이신"
+      },
+      {
+        "from": "클린다마이신",
+        "from_type": "medication",
+        "to": "폐렴",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "적절한 치료는 세프트리악손 + 클린다마이신"
+      }
+    ]
+  },
+  "1140": {
+    "entities": [
+      {
+        "name": "발 붓기",
+        "type": "symptom"
+      },
+      {
+        "name": "과로",
+        "type": "symptom"
+      },
+      {
+        "name": "긴장",
+        "type": "symptom"
+      },
+      {
+        "name": "구토",
+        "type": "symptom"
+      },
+      {
+        "name": "복통",
+        "type": "symptom"
+      },
+      {
+        "name": "C4 보체",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1141": {
+    "entities": [
+      {
+        "name": "부종",
+        "type": "symptom"
+      },
+      {
+        "name": "ACE 억제제",
+        "type": "medication"
+      },
+      {
+        "name": "고혈압",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "부종",
+        "from_type": "symptom",
+        "to": "고혈압",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "눈 주위와 입술이 붓는다"
+      },
+      {
+        "from": "ACE 억제제",
+        "from_type": "medication",
+        "to": "고혈압",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "ACE 억제제로 약물 치료를 시작했다"
+      }
+    ]
+  },
+  "1142": {
+    "entities": [
+      {
+        "name": "재채기",
+        "type": "symptom"
+      },
+      {
+        "name": "맑은 콧물",
+        "type": "symptom"
+      },
+      {
+        "name": "코막힘",
+        "type": "symptom"
+      },
+      {
+        "name": "알레르기 비염",
+        "type": "disease"
+      },
+      {
+        "name": "코안 분무 스테로이드제",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "재채기",
+        "from_type": "symptom",
+        "to": "알레르기 비염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 재채기로 내원"
+      },
+      {
+        "from": "맑은 콧물",
+        "from_type": "symptom",
+        "to": "알레르기 비염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 맑은 콧물로 내원"
+      },
+      {
+        "from": "코막힘",
+        "from_type": "symptom",
+        "to": "알레르기 비염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 코막힘으로 내원"
+      },
+      {
+        "from": "코안 분무 스테로이드제",
+        "from_type": "medication",
+        "to": "알레르기 비염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "코막힘을 해결하기 위한 1차 치료로 적합한 약제"
+      }
+    ]
+  },
+  "1143": {
+    "entities": [
+      {
+        "name": "맑은 콧물",
+        "type": "symptom"
+      },
+      {
+        "name": "재채기",
+        "type": "symptom"
+      },
+      {
+        "name": "코막힘",
+        "type": "symptom"
+      },
+      {
+        "name": "눈 가려움",
+        "type": "symptom"
+      },
+      {
+        "name": "입천장이 가려움",
+        "type": "symptom"
+      },
+      {
+        "name": "입술 붓기",
+        "type": "symptom"
+      },
+      {
+        "name": "알레르기 비염",
+        "type": "disease"
+      },
+      {
+        "name": "자작나무",
+        "type": "allergen"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "맑은 콧물",
+        "from_type": "symptom",
+        "to": "알레르기 비염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 맑은 콧물로 내원"
+      },
+      {
+        "from": "재채기",
+        "from_type": "symptom",
+        "to": "알레르기 비염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 재채기로 내원"
+      },
+      {
+        "from": "코막힘",
+        "from_type": "symptom",
+        "to": "알레르기 비염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 코막힘으로 내원"
+      },
+      {
+        "from": "눈 가려움",
+        "from_type": "symptom",
+        "to": "알레르기 비염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 눈 가려움으로 내원"
+      },
+      {
+        "from": "입천장이 가려움",
+        "from_type": "symptom",
+        "to": "알레르기 비염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 입천장이 가려움으로 내원"
+      },
+      {
+        "from": "입술 붓기",
+        "from_type": "symptom",
+        "to": "알레르기 비염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 입술 붓기로 내원"
+      }
+    ]
+  },
+  "1145": {
+    "entities": [
+      {
+        "name": "두드러기",
+        "type": "symptom"
+      },
+      {
+        "name": "새우 알레르기",
+        "type": "disease"
+      },
+      {
+        "name": "항히스타민제",
+        "type": "medication"
+      },
+      {
+        "name": "류코트리엔 수용체 차단제",
+        "type": "medication"
+      },
+      {
+        "name": "에피네프린",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "두드러기",
+        "from_type": "symptom",
+        "to": "새우 알레르기",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "전신에 두드러기가 발생하여 치료받은 과거력이 있었다."
+      },
+      {
+        "from": "항히스타민제",
+        "from_type": "medication",
+        "to": "새우 알레르기",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "두드러기 발생 시 항히스타민제를 복용한다."
+      },
+      {
+        "from": "류코트리엔 수용체 차단제",
+        "from_type": "medication",
+        "to": "새우 알레르기",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "새우를 먹기 전 류코트리엔 수용체 차단제를 복용한다."
+      },
+      {
+        "from": "에피네프린",
+        "from_type": "medication",
+        "to": "새우 알레르기",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "두드러기 발생 시 에피네프린을 피하주사한다."
+      }
+    ]
+  },
+  "1146": {
+    "entities": [
+      {
+        "name": "호흡곤란",
+        "type": "symptom"
+      },
+      {
+        "name": "가려움",
+        "type": "symptom"
+      },
+      {
+        "name": "두드러기",
+        "type": "symptom"
+      },
+      {
+        "name": "비용종",
+        "type": "disease"
+      },
+      {
+        "name": "해열진통제",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "호흡곤란",
+        "from_type": "symptom",
+        "to": "비용종",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "호흡곤란으로 응급실에 내원"
+      },
+      {
+        "from": "가려움",
+        "from_type": "symptom",
+        "to": "비용종",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "온몸에 가려움 발생"
+      },
+      {
+        "from": "두드러기",
+        "from_type": "symptom",
+        "to": "비용종",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "두드러기가 발생"
+      },
+      {
+        "from": "해열진통제",
+        "from_type": "medication",
+        "to": "비용종",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "적절한 해열진통제"
+      }
+    ]
+  },
+  "1147": {
+    "entities": [
+      {
+        "name": "전신 발진",
+        "type": "symptom"
+      },
+      {
+        "name": "고열",
+        "type": "symptom"
+      },
+      {
+        "name": "통풍",
+        "type": "disease"
+      },
+      {
+        "name": "삼차신경통",
+        "type": "disease"
+      },
+      {
+        "name": "고용량 스테로이드",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "전신 발진",
+        "from_type": "symptom",
+        "to": "통풍",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 전신 발진으로 내원"
+      },
+      {
+        "from": "고열",
+        "from_type": "symptom",
+        "to": "통풍",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 고열로 내원"
+      },
+      {
+        "from": "고용량 스테로이드",
+        "from_type": "treatment",
+        "to": "통풍",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "고용량 스테로이드로 치료"
+      }
+    ]
+  },
+  "1148": {
+    "entities": [
+      {
+        "name": "눈 붓기",
+        "type": "symptom"
+      },
+      {
+        "name": "호흡 곤란",
+        "type": "symptom"
+      },
+      {
+        "name": "옥살리플라틴",
+        "type": "medication"
+      },
+      {
+        "name": "약물 과민 반응",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "눈 붓기",
+        "from_type": "symptom",
+        "to": "약물 과민 반응",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "이전에도 같은 약물 투여 시 비슷한 증상이 발생한 적이 있다."
+      },
+      {
+        "from": "호흡 곤란",
+        "from_type": "symptom",
+        "to": "약물 과민 반응",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "이전에도 같은 약물 투여 시 비슷한 증상이 발생한 적이 있다."
+      },
+      {
+        "from": "옥살리플라틴",
+        "from_type": "medication",
+        "to": "약물 과민 반응",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "항암치료 도중 옥살리플라틴 투여"
+      }
+    ]
+  },
+  "115": {
+    "entities": [
+      {
+        "name": "폐농양",
+        "type": "disease"
+      },
+      {
+        "name": "체위배액",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "체위배액",
+        "from_type": "treatment",
+        "to": "폐농양",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "체위배액이 효과적인 치료 방법으로 사용되는 질환은 폐농양"
+      }
+    ]
+  },
+  "116": {
+    "entities": [
+      {
+        "name": "기침",
+        "type": "symptom"
+      },
+      {
+        "name": "객혈",
+        "type": "symptom"
+      },
+      {
+        "name": "폐렴",
+        "type": "disease"
+      },
+      {
+        "name": "가슴 고해상 전산화 단층촬영",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "기침",
+        "from_type": "symptom",
+        "to": "폐렴",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "반복적인 기침으로 내원"
+      },
+      {
+        "from": "객혈",
+        "from_type": "symptom",
+        "to": "폐렴",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "객혈로 내원"
+      }
+    ]
+  },
+  "117": {
+    "entities": [
+      {
+        "name": "기침",
+        "type": "symptom"
+      },
+      {
+        "name": "기관지 확장증",
+        "type": "disease"
+      },
+      {
+        "name": "기관지동맥색전술",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "기침",
+        "from_type": "symptom",
+        "to": "기관지 확장증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "60세 남자가 기침할 때마다 피가 나와서 내원"
+      },
+      {
+        "from": "기관지동맥색전술",
+        "from_type": "treatment",
+        "to": "기관지 확장증",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "환자의 치료로 적절한 것은 기관지동맥색전술"
+      }
+    ]
+  },
+  "119": {
+    "entities": [
+      {
+        "name": "기침",
+        "type": "symptom"
+      },
+      {
+        "name": "열감",
+        "type": "symptom"
+      },
+      {
+        "name": "당뇨",
+        "type": "disease"
+      },
+      {
+        "name": "폐 결절",
+        "type": "disease"
+      },
+      {
+        "name": "기관지폐포세척술",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "기침",
+        "from_type": "symptom",
+        "to": "당뇨",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 기침으로 내원"
+      },
+      {
+        "from": "열감",
+        "from_type": "symptom",
+        "to": "당뇨",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 열감으로 내원"
+      },
+      {
+        "from": "기관지폐포세척술",
+        "from_type": "test",
+        "to": "폐 결절",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "이 환자의 진단을 위해 가장 적절한 검사"
+      }
+    ]
+  },
+  "12": {
+    "entities": [
+      {
+        "name": "기침",
+        "type": "symptom"
+      },
+      {
+        "name": "부비동염",
+        "type": "disease"
+      },
+      {
+        "name": "부비동 X선 검사",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "기침",
+        "from_type": "symptom",
+        "to": "부비동염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 기침으로 내원"
+      },
+      {
+        "from": "부비동 X선 검사",
+        "from_type": "test",
+        "to": "부비동염",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "가장 먼저 시행해야 할 검사"
+      }
+    ]
+  },
+  "120": {
+    "entities": [
+      {
+        "name": "폐결핵",
+        "type": "disease"
+      },
+      {
+        "name": "임신",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "임신",
+        "from_type": "symptom",
+        "to": "폐결핵",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "임신 3개월임이 밝혀졌다."
+      }
+    ]
+  },
+  "121": {
+    "entities": [
+      {
+        "name": "투베르쿨린 피부반응검사",
+        "type": "test"
+      },
+      {
+        "name": "결핵",
+        "type": "disease"
+      },
+      {
+        "name": "이소니아지드",
+        "type": "medication"
+      },
+      {
+        "name": "당뇨병",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "투베르쿨린 피부반응검사",
+        "from_type": "test",
+        "to": "결핵",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "경결 크기가 15mm로 측정"
+      },
+      {
+        "from": "이소니아지드",
+        "from_type": "medication",
+        "to": "결핵",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "9개월 이소니아지드 단독 치료"
+      }
+    ]
+  },
+  "122": {
+    "entities": [
+      {
+        "name": "호흡곤란",
+        "type": "symptom"
+      },
+      {
+        "name": "폐성심",
+        "type": "disease"
+      },
+      {
+        "name": "기침",
+        "type": "symptom"
+      },
+      {
+        "name": "점액성 가래",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "호흡곤란",
+        "from_type": "symptom",
+        "to": "폐성심",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "운동 시 심해지는 호흡곤란으로 내원"
+      },
+      {
+        "from": "기침",
+        "from_type": "symptom",
+        "to": "폐성심",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "평소에도 기침이 지속되었다고 한다"
+      },
+      {
+        "from": "점액성 가래",
+        "from_type": "symptom",
+        "to": "폐성심",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "점액성 가래가 있었다고 한다"
+      }
+    ]
+  },
+  "1229": {
+    "entities": [
+      {
+        "name": "만성기침",
+        "type": "symptom"
+      },
+      {
+        "name": "후비루 증후군",
+        "type": "disease"
+      },
+      {
+        "name": "천식",
+        "type": "disease"
+      },
+      {
+        "name": "위식도역류질환",
+        "type": "disease"
+      },
+      {
+        "name": "만성폐쇄성폐질환",
+        "type": "disease"
+      },
+      {
+        "name": "폐암",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "만성기침",
+        "from_type": "symptom",
+        "to": "후비루 증후군",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "만성기침의 주요 원인으로 후비루 증후군이 언급됨"
+      },
+      {
+        "from": "만성기침",
+        "from_type": "symptom",
+        "to": "천식",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "만성기침의 주요 원인으로 천식이 언급됨"
+      },
+      {
+        "from": "만성기침",
+        "from_type": "symptom",
+        "to": "위식도역류질환",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "만성기침의 주요 원인으로 위식도역류질환이 언급됨"
+      },
+      {
+        "from": "만성기침",
+        "from_type": "symptom",
+        "to": "만성폐쇄성폐질환",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "만성기침의 원인으로 만성폐쇄성폐질환이 언급됨"
+      },
+      {
+        "from": "만성기침",
+        "from_type": "symptom",
+        "to": "폐암",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "만성기침의 원인으로 폐암이 언급됨"
+      }
+    ]
+  },
+  "1841": {
+    "entities": [
+      {
+        "name": "자궁근종",
+        "type": "disease"
+      },
+      {
+        "name": "골반 초음파",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1842": {
+    "entities": [
+      {
+        "name": "난소 낭종",
+        "type": "disease"
+      },
+      {
+        "name": "골반 초음파",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1843": {
+    "entities": [
+      {
+        "name": "자궁내막증",
+        "type": "disease"
+      },
+      {
+        "name": "복강경 검사",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1845": {
+    "entities": [
+      {
+        "name": "자궁경부암",
+        "type": "disease"
+      },
+      {
+        "name": "자궁경부 세포진",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1846": {
+    "entities": [
+      {
+        "name": "난소암",
+        "type": "disease"
+      },
+      {
+        "name": "CA-125",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1848": {
+    "entities": [
+      {
+        "name": "자궁외임신",
+        "type": "disease"
+      },
+      {
+        "name": "β-hCG 상승",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "β-hCG 상승",
+        "from_type": "symptom",
+        "to": "자궁외임신",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "자궁외임신을 의심할 수 있는 주요 진단 기준"
+      }
+    ]
+  },
+  "1849": {
+    "entities": [
+      {
+        "name": "태반 조기 박리",
+        "type": "disease"
+      },
+      {
+        "name": "태반 분리",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "태반 분리",
+        "from_type": "symptom",
+        "to": "태반 조기 박리",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "태반 분리 확인"
+      }
+    ]
+  },
+  "1850": {
+    "entities": [
+      {
+        "name": "임신성 당뇨병",
+        "type": "disease"
+      },
+      {
+        "name": "75g 경구 당부하 검사",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1851": {
+    "entities": [
+      {
+        "name": "고혈압",
+        "type": "symptom"
+      },
+      {
+        "name": "자간증",
+        "type": "disease"
+      },
+      {
+        "name": "단백뇨",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "고혈압",
+        "from_type": "symptom",
+        "to": "자간증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "임신 중 고혈압과 관련된 자간증의 주요 진단 기준"
+      },
+      {
+        "from": "단백뇨",
+        "from_type": "symptom",
+        "to": "자간증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "임신 중 고혈압과 관련된 자간증의 주요 진단 기준"
+      }
+    ]
+  },
+  "1853": {
+    "entities": [
+      {
+        "name": "양수과다증",
+        "type": "disease"
+      },
+      {
+        "name": "초음파 검사",
+        "type": "test"
+      },
+      {
+        "name": "양수지수",
+        "type": "symptom"
+      }
+    ],
+    "relationships": []
+  },
+  "1854": {
+    "entities": [
+      {
+        "name": "양수과소증",
+        "type": "disease"
+      },
+      {
+        "name": "초음파 검사",
+        "type": "test"
+      },
+      {
+        "name": "양수지수",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "양수지수",
+        "from_type": "test",
+        "to": "양수과소증",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "초음파 검사에서 양수과소증을 진단할 수 있는 양수지수"
+      }
+    ]
+  },
+  "1855": {
+    "entities": [
+      {
+        "name": "자궁경부무력증",
+        "type": "disease"
+      },
+      {
+        "name": "자궁경부 길이",
+        "type": "symptom"
+      }
+    ],
+    "relationships": []
+  },
+  "1856": {
+    "entities": [
+      {
+        "name": "자궁내막증식증",
+        "type": "disease"
+      },
+      {
+        "name": "자궁내막 생검",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1858": {
+    "entities": [
+      {
+        "name": "난소낭종파열",
+        "type": "disease"
+      },
+      {
+        "name": "낭종 파열 출혈",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "낭종 파열 출혈",
+        "from_type": "symptom",
+        "to": "난소낭종파열",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "영상의학적 소견으로 확인해야 할 주요 요소"
+      }
+    ]
+  },
+  "1859": {
+    "entities": [
+      {
+        "name": "질염",
+        "type": "disease"
+      },
+      {
+        "name": "염증 세포",
+        "type": "symptom"
+      }
+    ],
+    "relationships": []
+  },
+  "1861": {
+    "entities": [
+      {
+        "name": "자궁경관 무력증",
+        "type": "disease"
+      },
+      {
+        "name": "자궁경부 길이",
+        "type": "symptom"
+      }
+    ],
+    "relationships": []
+  },
+  "1862": {
+    "entities": [
+      {
+        "name": "난소 과다 자극 증후군",
+        "type": "disease"
+      },
+      {
+        "name": "난소 비대",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "난소 비대",
+        "from_type": "symptom",
+        "to": "난소 과다 자극 증후군",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "복부 초음파로 확인할 수 있는 주요 소견"
+      }
+    ]
+  },
+  "1863": {
+    "entities": [
+      {
+        "name": "자궁경부이형성증",
+        "type": "disease"
+      },
+      {
+        "name": "조직 생검",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1864": {
+    "entities": [
+      {
+        "name": "조기양막파열",
+        "type": "disease"
+      },
+      {
+        "name": "Nitrazine 검사",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1865": {
+    "entities": [
+      {
+        "name": "다태임신",
+        "type": "disease"
+      },
+      {
+        "name": "초음파 검사",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1866": {
+    "entities": [
+      {
+        "name": "자궁탈출증",
+        "type": "disease"
+      },
+      {
+        "name": "자궁 돌출",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "자궁 돌출",
+        "from_type": "symptom",
+        "to": "자궁탈출증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "신체검사에서 확인해야 할 주요 소견"
+      }
+    ]
+  },
+  "1867": {
+    "entities": [
+      {
+        "name": "난관 임신",
+        "type": "disease"
+      },
+      {
+        "name": "초음파",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1869": {
+    "entities": [
+      {
+        "name": "조기진통",
+        "type": "disease"
+      },
+      {
+        "name": "자궁 수축",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "자궁 수축",
+        "from_type": "symptom",
+        "to": "조기진통",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "조기진통의 진단 기준 중 하나로"
+      }
+    ]
+  },
+  "1870": {
+    "entities": [
+      {
+        "name": "만성태반부전",
+        "type": "disease"
+      },
+      {
+        "name": "도플러 초음파",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1871": {
+    "entities": [
+      {
+        "name": "자궁근종",
+        "type": "disease"
+      },
+      {
+        "name": "증상",
+        "type": "symptom"
+      },
+      {
+        "name": "경과 관찰",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1872": {
+    "entities": [
+      {
+        "name": "난소 낭종",
+        "type": "disease"
+      },
+      {
+        "name": "경과 관찰",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1873": {
+    "entities": [
+      {
+        "name": "자궁내막증",
+        "type": "disease"
+      },
+      {
+        "name": "경구피임약",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "경구피임약",
+        "from_type": "medication",
+        "to": "자궁내막증",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "자궁내막증의 초기 약물 치료로 가장 우선적으로 고려되는 약제"
+      }
+    ]
+  },
+  "1875": {
+    "entities": [
+      {
+        "name": "자궁경부암",
+        "type": "disease"
+      },
+      {
+        "name": "자궁경부 원추절제술",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1876": {
+    "entities": [
+      {
+        "name": "난소암",
+        "type": "disease"
+      },
+      {
+        "name": "수술",
+        "type": "treatment"
+      },
+      {
+        "name": "항암치료",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "수술",
+        "from_type": "treatment",
+        "to": "난소암",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "난소암의 초기 치료에서 수술"
+      },
+      {
+        "from": "항암치료",
+        "from_type": "treatment",
+        "to": "난소암",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "난소암의 초기 치료에서 항암치료"
+      }
+    ]
+  },
+  "1879": {
+    "entities": [
+      {
+        "name": "태반 조기 박리",
+        "type": "disease"
+      },
+      {
+        "name": "응급 분만",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1881": {
+    "entities": [
+      {
+        "name": "자간증",
+        "type": "disease"
+      },
+      {
+        "name": "분만 유도",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "분만 유도",
+        "from_type": "treatment",
+        "to": "자간증",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "자간증의 초기 치료로 가장 우선적으로 고려해야 할 조치"
+      }
+    ]
+  },
+  "1882": {
+    "entities": [
+      {
+        "name": "임신성 고혈압",
+        "type": "disease"
+      },
+      {
+        "name": "메틸도파",
+        "type": "medication"
+      }
+    ],
+    "relationships": []
+  },
+  "1883": {
+    "entities": [
+      {
+        "name": "양수과다증",
+        "type": "disease"
+      },
+      {
+        "name": "경과 관찰",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1884": {
+    "entities": [
+      {
+        "name": "양수과소증",
+        "type": "disease"
+      },
+      {
+        "name": "수액 공급",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1885": {
+    "entities": [
+      {
+        "name": "자궁경부무력증",
+        "type": "disease"
+      },
+      {
+        "name": "자궁경부 봉합술",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1887": {
+    "entities": [
+      {
+        "name": "자궁내막암",
+        "type": "disease"
+      },
+      {
+        "name": "자궁 적출술",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1888": {
+    "entities": [
+      {
+        "name": "난소낭종파열",
+        "type": "disease"
+      },
+      {
+        "name": "경과 관찰",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1889": {
+    "entities": [
+      {
+        "name": "질염",
+        "type": "disease"
+      },
+      {
+        "name": "메트로니다졸",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "메트로니다졸",
+        "from_type": "medication",
+        "to": "질염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "질염의 초기 치료로 흔히 사용되는 약물"
+      }
+    ]
+  },
+  "1890": {
+    "entities": [
+      {
+        "name": "골반염증성 질환",
+        "type": "disease"
+      },
+      {
+        "name": "항생제",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "항생제",
+        "from_type": "medication",
+        "to": "골반염증성 질환",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "초기 치료로 권장되는 약물 치료는 항생제"
+      }
+    ]
+  },
+  "1892": {
+    "entities": [
+      {
+        "name": "난소 과다 자극 증후군",
+        "type": "disease"
+      },
+      {
+        "name": "수액 공급",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1893": {
+    "entities": [
+      {
+        "name": "자궁경부이형성증",
+        "type": "disease"
+      },
+      {
+        "name": "고등급 병변",
+        "type": "symptom"
+      },
+      {
+        "name": "자궁경부 원추절제술",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "고등급 병변",
+        "from_type": "symptom",
+        "to": "자궁경부이형성증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "고등급 병변(HSIL)이 확인된 경우"
+      },
+      {
+        "from": "자궁경부 원추절제술",
+        "from_type": "treatment",
+        "to": "자궁경부이형성증",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "1차적으로 시행해야 할 치료는 자궁경부 원추절제술"
+      }
+    ]
+  },
+  "1895": {
+    "entities": [
+      {
+        "name": "다태임신",
+        "type": "disease"
+      },
+      {
+        "name": "정기 초음파",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1896": {
+    "entities": [
+      {
+        "name": "자궁탈출증",
+        "type": "disease"
+      },
+      {
+        "name": "페서리 삽입",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1897": {
+    "entities": [
+      {
+        "name": "난관 임신",
+        "type": "disease"
+      },
+      {
+        "name": "메토트렉세이트",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "메토트렉세이트",
+        "from_type": "medication",
+        "to": "난관 임신",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "비수술적 치료 방법으로 메토트렉세이트"
+      }
+    ]
+  },
+  "1899": {
+    "entities": [
+      {
+        "name": "조기진통",
+        "type": "disease"
+      },
+      {
+        "name": "스테로이드",
+        "type": "medication"
+      },
+      {
+        "name": "토콜리틱",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "스테로이드",
+        "from_type": "medication",
+        "to": "조기진통",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "태아 폐 성숙을 촉진"
+      },
+      {
+        "from": "토콜리틱",
+        "from_type": "medication",
+        "to": "조기진통",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "자궁수축을 억제"
+      }
+    ]
+  },
+  "1900": {
+    "entities": [
+      {
+        "name": "만성태반부전",
+        "type": "disease"
+      },
+      {
+        "name": "조기 분만",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "2110": {
+    "entities": [
+      {
+        "name": "부정출혈",
+        "type": "symptom"
+      },
+      {
+        "name": "자궁내막 비후",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "부정출혈",
+        "from_type": "symptom",
+        "to": "자궁내막 비후",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "부정출혈을 주소로 내원"
+      }
+    ]
+  },
+  "2111": {
+    "entities": [
+      {
+        "name": "냄새나는 질 분비물",
+        "type": "symptom"
+      },
+      {
+        "name": "세균성 질염",
+        "type": "disease"
+      },
+      {
+        "name": "경구 메트로니다졸",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "냄새나는 질 분비물",
+        "from_type": "symptom",
+        "to": "세균성 질염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "냄새나는 질 분비물과 clue cell 관찰"
+      },
+      {
+        "from": "경구 메트로니다졸",
+        "from_type": "medication",
+        "to": "세균성 질염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "적절한 치료는 경구 메트로니다졸"
+      }
+    ]
+  },
+  "2112": {
+    "entities": [
+      {
+        "name": "생리 주기",
+        "type": "symptom"
+      },
+      {
+        "name": "Oligomenorrhea",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "생리 주기",
+        "from_type": "symptom",
+        "to": "Oligomenorrhea",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "생리 주기가 길어지고 생리양이 적음"
+      }
+    ]
+  },
+  "2113": {
+    "entities": [
+      {
+        "name": "자궁 경부암",
+        "type": "disease"
+      },
+      {
+        "name": "HPV 16",
+        "type": "disease"
+      }
+    ],
+    "relationships": []
+  },
+  "1901": {
+    "entities": [
+      {
+        "name": "소아 천식",
+        "type": "disease"
+      },
+      {
+        "name": "가역적 기류제한",
+        "type": "symptom"
+      },
+      {
+        "name": "폐기능 검사",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "가역적 기류제한",
+        "from_type": "symptom",
+        "to": "소아 천식",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "소아 천식의 진단에서 폐기능 검사로 확인해야 하는 주요 소견"
+      }
+    ]
+  },
+  "1902": {
+    "entities": [
+      {
+        "name": "기침",
+        "type": "symptom"
+      },
+      {
+        "name": "발열",
+        "type": "symptom"
+      },
+      {
+        "name": "소아 폐렴",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "기침",
+        "from_type": "symptom",
+        "to": "소아 폐렴",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "주요 증상으로 기침"
+      },
+      {
+        "from": "발열",
+        "from_type": "symptom",
+        "to": "소아 폐렴",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "주요 증상으로 발열"
+      }
+    ]
+  },
+  "1903": {
+    "entities": [
+      {
+        "name": "흡기성 협착음",
+        "type": "symptom"
+      },
+      {
+        "name": "크룹",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "흡기성 협착음",
+        "from_type": "symptom",
+        "to": "크룹",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "크룹 환자에서 흔히 관찰되는 주요 증상"
+      }
+    ]
+  },
+  "1904": {
+    "entities": [
+      {
+        "name": "소아 중이염",
+        "type": "disease"
+      },
+      {
+        "name": "고막의 팽창",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "고막의 팽창",
+        "from_type": "symptom",
+        "to": "소아 중이염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "고막의 상태를 평가할 때 확인해야 하는 주요 소견"
+      }
+    ]
+  },
+  "1906": {
+    "entities": [
+      {
+        "name": "가와사키병",
+        "type": "disease"
+      },
+      {
+        "name": "발열",
+        "type": "symptom"
+      }
+    ],
+    "relationships": []
+  },
+  "1911": {
+    "entities": [
+      {
+        "name": "소아 크론병",
+        "type": "disease"
+      },
+      {
+        "name": "비건락성 육아종",
+        "type": "symptom"
+      }
+    ],
+    "relationships": []
+  },
+  "1913": {
+    "entities": [
+      {
+        "name": "소아 요로감염",
+        "type": "disease"
+      },
+      {
+        "name": "백혈구",
+        "type": "symptom"
+      },
+      {
+        "name": "세균",
+        "type": "symptom"
+      }
+    ],
+    "relationships": []
+  },
+  "1914": {
+    "entities": [
+      {
+        "name": "수포성 병변",
+        "type": "symptom"
+      },
+      {
+        "name": "발열",
+        "type": "symptom"
+      },
+      {
+        "name": "피부 발진",
+        "type": "symptom"
+      },
+      {
+        "name": "수두",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "수포성 병변",
+        "from_type": "symptom",
+        "to": "수두",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "소아에서 수포성 병변과 발열을 동반하는 피부 발진을 특징으로 하는 질환"
+      },
+      {
+        "from": "발열",
+        "from_type": "symptom",
+        "to": "수두",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "소아에서 수포성 병변과 발열을 동반하는 피부 발진을 특징으로 하는 질환"
+      },
+      {
+        "from": "피부 발진",
+        "from_type": "symptom",
+        "to": "수두",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "소아에서 수포성 병변과 발열을 동반하는 피부 발진을 특징으로 하는 질환"
+      }
+    ]
+  },
+  "1916": {
+    "entities": [
+      {
+        "name": "발열",
+        "type": "symptom"
+      },
+      {
+        "name": "피부 병변",
+        "type": "symptom"
+      },
+      {
+        "name": "소양감",
+        "type": "symptom"
+      },
+      {
+        "name": "수포성 발진",
+        "type": "symptom"
+      },
+      {
+        "name": "수두",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "발열",
+        "from_type": "symptom",
+        "to": "수두",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "소아에서 발열과 피부 병변을 동반하는 바이러스성 질환"
+      },
+      {
+        "from": "피부 병변",
+        "from_type": "symptom",
+        "to": "수두",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "소아에서 발열과 피부 병변을 동반하는 바이러스성 질환"
+      },
+      {
+        "from": "소양감",
+        "from_type": "symptom",
+        "to": "수두",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "소양감을 동반한 수포성 발진이 특징인 질환"
+      },
+      {
+        "from": "수포성 발진",
+        "from_type": "symptom",
+        "to": "수두",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "소양감을 동반한 수포성 발진이 특징인 질환"
+      }
+    ]
+  },
+  "1917": {
+    "entities": [
+      {
+        "name": "소아 알레르기 비염",
+        "type": "disease"
+      },
+      {
+        "name": "점막 종창",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "점막 종창",
+        "from_type": "symptom",
+        "to": "소아 알레르기 비염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "비강 내 소견으로 확인"
+      }
+    ]
+  },
+  "1918": {
+    "entities": [
+      {
+        "name": "발열",
+        "type": "symptom"
+      },
+      {
+        "name": "호흡기 증상",
+        "type": "symptom"
+      },
+      {
+        "name": "중증 급성 호흡기 증후군",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "발열",
+        "from_type": "symptom",
+        "to": "중증 급성 호흡기 증후군",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "임상적 조건 중 하나"
+      },
+      {
+        "from": "호흡기 증상",
+        "from_type": "symptom",
+        "to": "중증 급성 호흡기 증후군",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "임상적 조건 중 하나"
+      }
+    ]
+  },
+  "1919": {
+    "entities": [
+      {
+        "name": "가래톳병",
+        "type": "disease"
+      },
+      {
+        "name": "림프절 종대",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "림프절 종대",
+        "from_type": "symptom",
+        "to": "가래톳병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "소아에서 가래톳병의 주요 임상 증상 중 하나"
+      }
+    ]
+  },
+  "1920": {
+    "entities": [
+      {
+        "name": "발작",
+        "type": "symptom"
+      },
+      {
+        "name": "비정상 방전",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1921": {
+    "entities": [
+      {
+        "name": "저산소증",
+        "type": "symptom"
+      },
+      {
+        "name": "뇌손상",
+        "type": "symptom"
+      },
+      {
+        "name": "소아 주산기 저산소 허혈성 뇌병증",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "저산소증",
+        "from_type": "symptom",
+        "to": "소아 주산기 저산소 허혈성 뇌병증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "진단에서 필수적인 기준"
+      },
+      {
+        "from": "뇌손상",
+        "from_type": "symptom",
+        "to": "소아 주산기 저산소 허혈성 뇌병증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "진단에서 필수적인 기준"
+      }
+    ]
+  },
+  "1922": {
+    "entities": [
+      {
+        "name": "발열",
+        "type": "symptom"
+      },
+      {
+        "name": "발열성 경련",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "발열",
+        "from_type": "symptom",
+        "to": "발열성 경련",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "발열과 동반되어 나타나는 경련"
+      }
+    ]
+  },
+  "1923": {
+    "entities": [
+      {
+        "name": "구루병",
+        "type": "disease"
+      },
+      {
+        "name": "비타민 D 결핍",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "비타민 D 결핍",
+        "from_type": "symptom",
+        "to": "구루병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "소아에서 비타민 D 결핍으로 인해 발생하는 대표적인 골격계 질환"
+      }
+    ]
+  },
+  "1924": {
+    "entities": [
+      {
+        "name": "빈혈",
+        "type": "disease"
+      },
+      {
+        "name": "헤모글로빈",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1925": {
+    "entities": [
+      {
+        "name": "혈우병",
+        "type": "disease"
+      },
+      {
+        "name": "혈액 응고 장애",
+        "type": "symptom"
+      },
+      {
+        "name": "응고 인자",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1926": {
+    "entities": [
+      {
+        "name": "소아 백혈병",
+        "type": "disease"
+      },
+      {
+        "name": "골수 검사",
+        "type": "test"
+      },
+      {
+        "name": "비정상 백혈구 증가",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "골수 검사",
+        "from_type": "test",
+        "to": "소아 백혈병",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "소아 백혈병 진단에서 골수 검사로 확인"
+      },
+      {
+        "from": "비정상 백혈구 증가",
+        "from_type": "symptom",
+        "to": "소아 백혈병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "주요 소견은 비정상 백혈구 증가"
+      }
+    ]
+  },
+  "1927": {
+    "entities": [
+      {
+        "name": "소아 비만",
+        "type": "disease"
+      },
+      {
+        "name": "체질량지수",
+        "type": "test"
+      }
+    ],
+    "relationships": []
+  },
+  "1928": {
+    "entities": [
+      {
+        "name": "소아 괴사성 장염",
+        "type": "disease"
+      },
+      {
+        "name": "장내 기포",
+        "type": "symptom"
+      },
+      {
+        "name": "복부 X선",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "장내 기포",
+        "from_type": "symptom",
+        "to": "소아 괴사성 장염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "장내 기포가 소아 괴사성 장염의 진단에 중요한 특징"
+      },
+      {
+        "from": "복부 X선",
+        "from_type": "test",
+        "to": "소아 괴사성 장염",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "복부 X선 소견으로 진단"
+      }
+    ]
+  },
+  "1929": {
+    "entities": [
+      {
+        "name": "ADHD",
+        "type": "disease"
+      },
+      {
+        "name": "주의력 결핍",
+        "type": "symptom"
+      },
+      {
+        "name": "과잉 행동",
+        "type": "symptom"
+      }
+    ],
+    "relationships": []
+  },
+  "1930": {
+    "entities": [
+      {
+        "name": "기침",
+        "type": "symptom"
+      },
+      {
+        "name": "쌕쌕거림",
+        "type": "symptom"
+      },
+      {
+        "name": "소아 천식성 기관지염",
+        "type": "disease"
+      },
+      {
+        "name": "기도 과민성",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "기침",
+        "from_type": "symptom",
+        "to": "소아 천식성 기관지염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "반복적인 기침"
+      },
+      {
+        "from": "쌕쌕거림",
+        "from_type": "symptom",
+        "to": "소아 천식성 기관지염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "반복적인 쌕쌕거림"
+      }
+    ]
+  },
+  "1931": {
+    "entities": [
+      {
+        "name": "소아 천식",
+        "type": "disease"
+      },
+      {
+        "name": "흡입형 스테로이드",
+        "type": "medication"
+      }
+    ],
+    "relationships": []
+  },
+  "1932": {
+    "entities": [
+      {
+        "name": "소아 폐렴",
+        "type": "disease"
+      },
+      {
+        "name": "아목시실린",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "아목시실린",
+        "from_type": "medication",
+        "to": "소아 폐렴",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "소아 폐렴의 1차 치료제로 권장되는 약물은 아목시실린"
+      }
+    ]
+  },
+  "1933": {
+    "entities": [
+      {
+        "name": "크룹",
+        "type": "disease"
+      },
+      {
+        "name": "기도 부종",
+        "type": "symptom"
+      },
+      {
+        "name": "흡입 에피네프린",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "기도 부종",
+        "from_type": "symptom",
+        "to": "크룹",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "크룹 환자에서 기도 부종"
+      },
+      {
+        "from": "흡입 에피네프린",
+        "from_type": "medication",
+        "to": "크룹",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "1차 약물 치료는 흡입 에피네프린"
+      }
+    ]
+  },
+  "1934": {
+    "entities": [
+      {
+        "name": "소아 급성 중이염",
+        "type": "disease"
+      },
+      {
+        "name": "아목시실린",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "아목시실린",
+        "from_type": "medication",
+        "to": "소아 급성 중이염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "소아 급성 중이염의 1차 약물 치료로 권장되는 항생제는 아목시실린"
+      }
+    ]
+  },
+  "1940": {
+    "entities": [
+      {
+        "name": "RSV 감염",
+        "type": "disease"
+      },
+      {
+        "name": "보존적 치료",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1941": {
+    "entities": [
+      {
+        "name": "소아 크론병",
+        "type": "disease"
+      },
+      {
+        "name": "스테로이드",
+        "type": "medication"
+      }
+    ],
+    "relationships": []
+  },
+  "1944": {
+    "entities": [
+      {
+        "name": "수두",
+        "type": "disease"
+      },
+      {
+        "name": "아시클로버",
+        "type": "medication"
+      }
+    ],
+    "relationships": []
+  },
+  "1945": {
+    "entities": [
+      {
+        "name": "소아 홍역",
+        "type": "disease"
+      },
+      {
+        "name": "대증 요법",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1946": {
+    "entities": [
+      {
+        "name": "소아 수두",
+        "type": "disease"
+      },
+      {
+        "name": "증상 완화",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1947": {
+    "entities": [
+      {
+        "name": "알레르기 비염",
+        "type": "disease"
+      },
+      {
+        "name": "비강 스테로이드",
+        "type": "medication"
+      }
+    ],
+    "relationships": []
+  },
+  "1949": {
+    "entities": [
+      {
+        "name": "세균성 림프절염",
+        "type": "disease"
+      },
+      {
+        "name": "클린다마이신",
+        "type": "medication"
+      }
+    ],
+    "relationships": []
+  },
+  "1950": {
+    "entities": [
+      {
+        "name": "소아 뇌전증",
+        "type": "disease"
+      },
+      {
+        "name": "발프로산",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "발프로산",
+        "from_type": "medication",
+        "to": "소아 뇌전증",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "소아 뇌전증의 1차 약물 치료로 주로 사용되는 약물"
+      }
+    ]
+  },
+  "1951": {
+    "entities": [
+      {
+        "name": "소아 주산기 저산소 허혈성 뇌병증",
+        "type": "disease"
+      },
+      {
+        "name": "저체온 치료",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "저체온 치료",
+        "from_type": "treatment",
+        "to": "소아 주산기 저산소 허혈성 뇌병증",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "신경학적 손상을 줄이기 위한 표준 치료법"
+      }
+    ]
+  },
+  "1952": {
+    "entities": [
+      {
+        "name": "소아 열성 경련",
+        "type": "disease"
+      },
+      {
+        "name": "해열제",
+        "type": "medication"
+      }
+    ],
+    "relationships": []
+  },
+  "1953": {
+    "entities": [
+      {
+        "name": "비타민 D",
+        "type": "medication"
+      },
+      {
+        "name": "골격계 이상",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "비타민 D",
+        "from_type": "medication",
+        "to": "골격계 이상",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "비타민 D로 치료"
+      }
+    ]
+  },
+  "1955": {
+    "entities": [
+      {
+        "name": "혈우병",
+        "type": "disease"
+      },
+      {
+        "name": "응고인자 보충",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1956": {
+    "entities": [
+      {
+        "name": "소아 급성 림프구성 백혈병",
+        "type": "disease"
+      },
+      {
+        "name": "항암 화학요법",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "항암 화학요법",
+        "from_type": "treatment",
+        "to": "소아 급성 림프구성 백혈병",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "소아 급성 림프구성 백혈병의 초기 치료로 항암 화학요법"
+      }
+    ]
+  },
+  "1957": {
+    "entities": [
+      {
+        "name": "소아 비만",
+        "type": "disease"
+      },
+      {
+        "name": "생활습관 개선",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1958": {
+    "entities": [
+      {
+        "name": "소아 괴사성 장염",
+        "type": "disease"
+      },
+      {
+        "name": "광범위 항생제",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "광범위 항생제",
+        "from_type": "medication",
+        "to": "소아 괴사성 장염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "초기 치료로 금식과 함께 시행해야 하는 주요 처치"
+      }
+    ]
+  },
+  "1959": {
+    "entities": [
+      {
+        "name": "ADHD",
+        "type": "disease"
+      },
+      {
+        "name": "행동 요법",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "1960": {
+    "entities": [
+      {
+        "name": "소아 천식성 기관지염",
+        "type": "disease"
+      },
+      {
+        "name": "흡입 스테로이드",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "흡입 스테로이드",
+        "from_type": "medication",
+        "to": "소아 천식성 기관지염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "소아 천식성 기관지염의 초기 치료로 염증을 조절하고 기도를 확장하기 위해 사용하는 주요 약제"
+      }
+    ]
+  },
+  "21002": {
+    "entities": [
+      {
+        "name": "신증후군",
+        "type": "disease"
+      },
+      {
+        "name": "스테로이드 치료",
+        "type": "treatment"
+      },
+      {
+        "name": "전신 부종",
+        "type": "symptom"
+      },
+      {
+        "name": "설사",
+        "type": "symptom"
+      },
+      {
+        "name": "흉통",
+        "type": "symptom"
+      },
+      {
+        "name": "호흡 곤란",
+        "type": "symptom"
+      },
+      {
+        "name": "빈호흡",
+        "type": "symptom"
+      },
+      {
+        "name": "대사성 산증",
+        "type": "disease"
+      },
+      {
+        "name": "호흡성 알칼리증",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "전신 부종",
+        "from_type": "symptom",
+        "to": "신증후군",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "신증후군으로 스테로이드 치료 후 전신 부종 발생"
+      },
+      {
+        "from": "설사",
+        "from_type": "symptom",
+        "to": "신증후군",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "신증후군으로 스테로이드 치료 후 설사 발생"
+      },
+      {
+        "from": "흉통",
+        "from_type": "symptom",
+        "to": "대사성 산증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "갑작스러운 흉통 발생"
+      },
+      {
+        "from": "호흡 곤란",
+        "from_type": "symptom",
+        "to": "대사성 산증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "호흡 곤란 발생"
+      },
+      {
+        "from": "빈호흡",
+        "from_type": "symptom",
+        "to": "호흡성 알칼리증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "호흡수 분당 46회로 빈호흡"
+      }
+    ]
+  },
+  "21004": {
+    "entities": [
+      {
+        "name": "고혈압",
+        "type": "disease"
+      },
+      {
+        "name": "소아 및 청소년",
+        "type": "anatomy"
+      }
+    ],
+    "relationships": []
+  },
+  "21005": {
+    "entities": [],
+    "relationships": []
+  },
+  "21006": {
+    "entities": [
+      {
+        "name": "알도스테론 부족",
+        "type": "disease"
+      }
+    ],
+    "relationships": []
+  },
+  "21007": {
+    "entities": [
+      {
+        "name": "설사",
+        "type": "symptom"
+      },
+      {
+        "name": "발열",
+        "type": "symptom"
+      },
+      {
+        "name": "소변량 감소",
+        "type": "symptom"
+      },
+      {
+        "name": "탈수",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "설사",
+        "from_type": "symptom",
+        "to": "탈수",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "영아가 설사로 응급실에 내원"
+      },
+      {
+        "from": "발열",
+        "from_type": "symptom",
+        "to": "탈수",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "영아가 발열로 응급실에 내원"
+      },
+      {
+        "from": "소변량 감소",
+        "from_type": "symptom",
+        "to": "탈수",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "영아가 소변량 감소로 응급실에 내원"
+      }
+    ]
+  },
+  "21008": {
+    "entities": [
+      {
+        "name": "사구체성 혈뇨",
+        "type": "symptom"
+      },
+      {
+        "name": "변형된 적혈구",
+        "type": "symptom"
+      }
+    ],
+    "relationships": []
+  },
+  "2130": {
+    "entities": [
+      {
+        "name": "심부 정맥 혈전증",
+        "type": "disease"
+      },
+      {
+        "name": "폐동맥 색전증",
+        "type": "disease"
+      },
+      {
+        "name": "쇼크",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "쇼크",
+        "from_type": "symptom",
+        "to": "폐동맥 색전증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "폐동맥 색전증 가능성을 강하게 시사한다"
+      }
+    ]
+  },
+  "2131": {
+    "entities": [
+      {
+        "name": "얼굴 부종",
+        "type": "symptom"
+      },
+      {
+        "name": "호흡곤란",
+        "type": "symptom"
+      },
+      {
+        "name": "아나필락시스",
+        "type": "disease"
+      },
+      {
+        "name": "에피네프린",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "얼굴 부종",
+        "from_type": "symptom",
+        "to": "아나필락시스",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "얼굴 부종 증상이 발생"
+      },
+      {
+        "from": "호흡곤란",
+        "from_type": "symptom",
+        "to": "아나필락시스",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "호흡곤란 증상이 발생"
+      },
+      {
+        "from": "에피네프린",
+        "from_type": "medication",
+        "to": "아나필락시스",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "1차 치료로 에피네프린 선택"
+      }
+    ]
+  },
+  "2135": {
+    "entities": [
+      {
+        "name": "경련",
+        "type": "symptom"
+      },
+      {
+        "name": "발열",
+        "type": "symptom"
+      },
+      {
+        "name": "세균성 뇌수막염",
+        "type": "disease"
+      },
+      {
+        "name": "cefotaxime",
+        "type": "medication"
+      },
+      {
+        "name": "Vancomycin",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "경련",
+        "from_type": "symptom",
+        "to": "세균성 뇌수막염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "경련과 발열을 주소로 응급실에 내원"
+      },
+      {
+        "from": "발열",
+        "from_type": "symptom",
+        "to": "세균성 뇌수막염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "경련과 발열을 주소로 응급실에 내원"
+      },
+      {
+        "from": "cefotaxime",
+        "from_type": "medication",
+        "to": "세균성 뇌수막염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "cefotaxime 투여를 시작하였다"
+      },
+      {
+        "from": "Vancomycin",
+        "from_type": "medication",
+        "to": "세균성 뇌수막염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "함께 투여해야 할 항생제는 Vancomycin"
+      }
+    ]
+  },
+  "2137": {
+    "entities": [
+      {
+        "name": "저혈압",
+        "type": "symptom"
+      },
+      {
+        "name": "labetalol",
+        "type": "medication"
+      },
+      {
+        "name": "Glucagon",
+        "type": "medication"
+      }
+    ],
+    "relationships": []
+  },
+  "2138": {
+    "entities": [
+      {
+        "name": "두근거림",
+        "type": "symptom"
+      },
+      {
+        "name": "초조함",
+        "type": "symptom"
+      },
+      {
+        "name": "갑상선 중독 위기",
+        "type": "disease"
+      },
+      {
+        "name": "프로프라놀롤",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "두근거림",
+        "from_type": "symptom",
+        "to": "갑상선 중독 위기",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 두근거림과 초조함을 호소하며 내원하였다."
+      },
+      {
+        "from": "초조함",
+        "from_type": "symptom",
+        "to": "갑상선 중독 위기",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 두근거림과 초조함을 호소하며 내원하였다."
+      },
+      {
+        "from": "프로프라놀롤",
+        "from_type": "medication",
+        "to": "갑상선 중독 위기",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "이후 교감신경 자극을 억제하기 위해 베타 차단제를 투여해야 한다."
+      }
+    ]
+  },
+  "2139": {
+    "entities": [
+      {
+        "name": "간성뇌증",
+        "type": "disease"
+      },
+      {
+        "name": "락툴로스",
+        "type": "medication"
+      }
+    ],
+    "relationships": []
+  },
+  "2227": {
+    "entities": [
+      {
+        "name": "다리 열상",
+        "type": "symptom"
+      },
+      {
+        "name": "사고",
+        "type": "disease"
+      }
+    ],
+    "relationships": []
+  },
+  "2229": {
+    "entities": [
+      {
+        "name": "숨이 차다",
+        "type": "symptom"
+      },
+      {
+        "name": "폐부종",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "숨이 차다",
+        "from_type": "symptom",
+        "to": "폐부종",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 숨이 차서 내원하였다"
+      }
+    ]
+  },
+  "2231": {
+    "entities": [
+      {
+        "name": "이물질",
+        "type": "symptom"
+      },
+      {
+        "name": "위장관 내시경",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "2232": {
+    "entities": [
+      {
+        "name": "복부 팽만",
+        "type": "symptom"
+      },
+      {
+        "name": "자발성 세균성 복막염",
+        "type": "disease"
+      },
+      {
+        "name": "세포탁심",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "복부 팽만",
+        "from_type": "symptom",
+        "to": "자발성 세균성 복막염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 복부 팽만으로 내원"
+      },
+      {
+        "from": "세포탁심",
+        "from_type": "medication",
+        "to": "자발성 세균성 복막염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "세포탁심을 정맥으로 투여"
+      }
+    ]
+  },
+  "2233": {
+    "entities": [
+      {
+        "name": "급성 게실염",
+        "type": "disease"
+      },
+      {
+        "name": "항생제",
+        "type": "medication"
+      },
+      {
+        "name": "경피적 배농",
+        "type": "treatment"
+      },
+      {
+        "name": "수술적 치료",
+        "type": "treatment"
+      },
+      {
+        "name": "응급 수술적 치료",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "항생제",
+        "from_type": "medication",
+        "to": "급성 게실염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "1단계에서는 항생제를 정맥으로 투여하여 치료한다."
+      },
+      {
+        "from": "경피적 배농",
+        "from_type": "treatment",
+        "to": "급성 게실염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "2단계에서는 경피적 배농이 필요할 수 있다."
+      },
+      {
+        "from": "수술적 치료",
+        "from_type": "treatment",
+        "to": "급성 게실염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "3단계에서는 수술적 치료가 필요하다."
+      },
+      {
+        "from": "응급 수술적 치료",
+        "from_type": "treatment",
+        "to": "급성 게실염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "4단계에서는 응급 수술적 치료가 반드시 필요하다."
+      }
+    ]
+  },
+  "2235": {
+    "entities": [
+      {
+        "name": "두근거림",
+        "type": "symptom"
+      },
+      {
+        "name": "발작성 심실상성 빈맥",
+        "type": "disease"
+      },
+      {
+        "name": "아데노신",
+        "type": "medication"
+      },
+      {
+        "name": "베타차단제",
+        "type": "medication"
+      },
+      {
+        "name": "칼슘채널차단제",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "두근거림",
+        "from_type": "symptom",
+        "to": "발작성 심실상성 빈맥",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 갑작스러운 두근거림을 호소"
+      },
+      {
+        "from": "아데노신",
+        "from_type": "medication",
+        "to": "발작성 심실상성 빈맥",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "아데노신을 정맥으로 투여"
+      },
+      {
+        "from": "베타차단제",
+        "from_type": "medication",
+        "to": "발작성 심실상성 빈맥",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "베타차단제를 고려할 수 있다"
+      },
+      {
+        "from": "칼슘채널차단제",
+        "from_type": "medication",
+        "to": "발작성 심실상성 빈맥",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "칼슘채널차단제를 고려할 수 있다"
+      }
+    ]
+  },
+  "2237": {
+    "entities": [
+      {
+        "name": "질출혈",
+        "type": "symptom"
+      },
+      {
+        "name": "임신",
+        "type": "disease"
+      },
+      {
+        "name": "질식 초음파",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "질출혈",
+        "from_type": "symptom",
+        "to": "임신",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "27세 여성이 질출혈을 주소로 내원하였다."
+      },
+      {
+        "from": "질식 초음파",
+        "from_type": "test",
+        "to": "임신",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "다음으로 시행해야 할 적절한 검사는 질식 초음파"
+      }
+    ]
+  },
+  "2238": {
+    "entities": [
+      {
+        "name": "자발 호흡",
+        "type": "symptom"
+      },
+      {
+        "name": "가슴압박",
+        "type": "treatment"
+      },
+      {
+        "name": "구조 호흡",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "2240": {
+    "entities": [
+      {
+        "name": "의식 저하",
+        "type": "symptom"
+      },
+      {
+        "name": "CO 중독",
+        "type": "disease"
+      },
+      {
+        "name": "고압산소치료",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "의식 저하",
+        "from_type": "symptom",
+        "to": "CO 중독",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 의식 저하된 상태로 발견됨"
+      },
+      {
+        "from": "고압산소치료",
+        "from_type": "treatment",
+        "to": "CO 중독",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "가장 적절한 치료로 고압산소치료 제안"
+      }
+    ]
+  },
+  "2241": {
+    "entities": [
+      {
+        "name": "기력 저하",
+        "type": "symptom"
+      },
+      {
+        "name": "뇌졸중",
+        "type": "disease"
+      },
+      {
+        "name": "고나트륨혈증",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "기력 저하",
+        "from_type": "symptom",
+        "to": "뇌졸중",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "기력 저하로 응급실에 내원하였다"
+      }
+    ]
+  },
+  "2242": {
+    "entities": [
+      {
+        "name": "발열",
+        "type": "symptom"
+      },
+      {
+        "name": "흉통",
+        "type": "symptom"
+      },
+      {
+        "name": "급성 심막염",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "발열",
+        "from_type": "symptom",
+        "to": "급성 심막염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 발열로 내원"
+      },
+      {
+        "from": "흉통",
+        "from_type": "symptom",
+        "to": "급성 심막염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "흉통이 주 증상으로 나타남"
+      }
+    ]
+  },
+  "2244": {
+    "entities": [
+      {
+        "name": "결핵",
+        "type": "disease"
+      },
+      {
+        "name": "기침",
+        "type": "symptom"
+      },
+      {
+        "name": "가래",
+        "type": "symptom"
+      },
+      {
+        "name": "acid-fast bacillus 검사",
+        "type": "test"
+      },
+      {
+        "name": "항결핵 치료",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "기침",
+        "from_type": "symptom",
+        "to": "결핵",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자는 현재 기침과 가래 증상은 없으며"
+      },
+      {
+        "from": "가래",
+        "from_type": "symptom",
+        "to": "결핵",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자는 현재 기침과 가래 증상은 없으며"
+      },
+      {
+        "from": "acid-fast bacillus 검사",
+        "from_type": "test",
+        "to": "결핵",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "3주 전과 2주 전 시행한 acid-fast bacillus 검사에서 양성 소견을 보였으나"
+      },
+      {
+        "from": "항결핵 치료",
+        "from_type": "treatment",
+        "to": "결핵",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "항결핵 치료를 시작한 지 1주일밖에 되지 않았고"
+      }
+    ]
+  },
+  "2245": {
+    "entities": [
+      {
+        "name": "복통",
+        "type": "symptom"
+      },
+      {
+        "name": "구토",
+        "type": "symptom"
+      },
+      {
+        "name": "담낭염",
+        "type": "disease"
+      },
+      {
+        "name": "응급담낭절제술",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "복통",
+        "from_type": "symptom",
+        "to": "담낭염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 복통으로 내원"
+      },
+      {
+        "from": "구토",
+        "from_type": "symptom",
+        "to": "담낭염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 구토로 내원"
+      },
+      {
+        "from": "응급담낭절제술",
+        "from_type": "treatment",
+        "to": "담낭염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "가장 적절한 치료는 응급담낭절제술"
+      }
+    ]
+  },
+  "2246": {
+    "entities": [
+      {
+        "name": "발열",
+        "type": "symptom"
+      },
+      {
+        "name": "설사",
+        "type": "symptom"
+      },
+      {
+        "name": "여행 이력",
+        "type": "symptom"
+      },
+      {
+        "name": "세균 감염",
+        "type": "disease"
+      },
+      {
+        "name": "아지트로마이신",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "발열",
+        "from_type": "symptom",
+        "to": "세균 감염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "발열 증상"
+      },
+      {
+        "from": "설사",
+        "from_type": "symptom",
+        "to": "세균 감염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "하루 10회 이상의 설사"
+      },
+      {
+        "from": "아지트로마이신",
+        "from_type": "medication",
+        "to": "세균 감염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "가장 적절한 항생제"
+      }
+    ]
+  },
+  "2247": {
+    "entities": [
+      {
+        "name": "어지러움",
+        "type": "symptom"
+      },
+      {
+        "name": "구토",
+        "type": "symptom"
+      },
+      {
+        "name": "좌측 전정 신경염",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "어지러움",
+        "from_type": "symptom",
+        "to": "좌측 전정 신경염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 어지러움으로 내원"
+      },
+      {
+        "from": "구토",
+        "from_type": "symptom",
+        "to": "좌측 전정 신경염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 구토로 내원"
+      }
+    ]
+  },
+  "2268": {
+    "entities": [
+      {
+        "name": "청색증",
+        "type": "symptom"
+      },
+      {
+        "name": "축동",
+        "type": "symptom"
+      },
+      {
+        "name": "설사",
+        "type": "symptom"
+      },
+      {
+        "name": "발한",
+        "type": "symptom"
+      },
+      {
+        "name": "메틸렌블루",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "청색증",
+        "from_type": "symptom",
+        "to": "프토닐제초제 중독",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "프토닐제초제 복용 후 청색증 관찰"
+      },
+      {
+        "from": "축동",
+        "from_type": "symptom",
+        "to": "프토닐제초제 중독",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "프토닐제초제 복용 후 축동 관찰"
+      },
+      {
+        "from": "설사",
+        "from_type": "symptom",
+        "to": "프토닐제초제 중독",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "프토닐제초제 복용 후 설사 관찰"
+      },
+      {
+        "from": "발한",
+        "from_type": "symptom",
+        "to": "프토닐제초제 중독",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "프토닐제초제 복용 후 발한 관찰"
+      },
+      {
+        "from": "메틸렌블루",
+        "from_type": "medication",
+        "to": "프토닐제초제 중독",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "메틸렌블루로 치료"
+      }
+    ]
+  },
+  "2269": {
+    "entities": [
+      {
+        "name": "열",
+        "type": "symptom"
+      },
+      {
+        "name": "귀 통증",
+        "type": "symptom"
+      },
+      {
+        "name": "중이염",
+        "type": "disease"
+      },
+      {
+        "name": "아목시실린",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "열",
+        "from_type": "symptom",
+        "to": "중이염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "열과 귀 통증으로 내원"
+      },
+      {
+        "from": "귀 통증",
+        "from_type": "symptom",
+        "to": "중이염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "열과 귀 통증으로 내원"
+      },
+      {
+        "from": "아목시실린",
+        "from_type": "medication",
+        "to": "중이염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "고용량 아목시실린 항생제 처방 후 외래 추적 관찰"
+      }
+    ]
+  },
+  "2270": {
+    "entities": [
+      {
+        "name": "식도 정맥류 출혈",
+        "type": "disease"
+      },
+      {
+        "name": "S-B tube",
+        "type": "treatment"
+      },
+      {
+        "name": "gastric balloon",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "2271": {
+    "entities": [
+      {
+        "name": "호흡곤란",
+        "type": "symptom"
+      },
+      {
+        "name": "목소리 변화",
+        "type": "symptom"
+      },
+      {
+        "name": "갑각류 알레르기",
+        "type": "disease"
+      },
+      {
+        "name": "에피네프린",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "호흡곤란",
+        "from_type": "symptom",
+        "to": "갑각류 알레르기",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "호흡곤란과 목소리 변화가 발생"
+      },
+      {
+        "from": "에피네프린",
+        "from_type": "medication",
+        "to": "갑각류 알레르기",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "에피네프린을 근육 주사"
+      }
+    ]
+  },
+  "2272": {
+    "entities": [],
+    "relationships": []
+  },
+  "2273": {
+    "entities": [
+      {
+        "name": "당뇨병성 케톤산증",
+        "type": "disease"
+      },
+      {
+        "name": "음이온 차이",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "음이온 차이",
+        "from_type": "symptom",
+        "to": "당뇨병성 케톤산증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "인슐린 지속주입 여부를 결정하는 데 가장 중요한 지표"
+      }
+    ]
+  },
+  "2274": {
+    "entities": [
+      {
+        "name": "복통",
+        "type": "symptom"
+      },
+      {
+        "name": "의식저하",
+        "type": "symptom"
+      },
+      {
+        "name": "무릎관절염",
+        "type": "disease"
+      },
+      {
+        "name": "하이드로코티손",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "복통",
+        "from_type": "symptom",
+        "to": "무릎관절염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 복통으로 내원"
+      },
+      {
+        "from": "의식저하",
+        "from_type": "symptom",
+        "to": "무릎관절염",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 의식저하로 내원"
+      },
+      {
+        "from": "하이드로코티손",
+        "from_type": "medication",
+        "to": "무릎관절염",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "하이드로코티손으로 치료"
+      }
+    ]
+  },
+  "2276": {
+    "entities": [
+      {
+        "name": "점상 출혈",
+        "type": "symptom"
+      },
+      {
+        "name": "혈소판 감소증",
+        "type": "disease"
+      },
+      {
+        "name": "아스피린",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "점상 출혈",
+        "from_type": "symptom",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 점상 출혈로 내원"
+      },
+      {
+        "from": "아스피린",
+        "from_type": "medication",
+        "to": "혈소판 감소증",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "환자가 아스피린을 복용 중"
+      }
+    ]
+  },
+  "2277": {
+    "entities": [
+      {
+        "name": "대량 혈변",
+        "type": "symptom"
+      },
+      {
+        "name": "와파린",
+        "type": "medication"
+      },
+      {
+        "name": "프로트롬빈시간",
+        "type": "test"
+      },
+      {
+        "name": "Fresh frozen plasma",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "2317": {
+    "entities": [
+      {
+        "name": "저혈압",
+        "type": "symptom"
+      },
+      {
+        "name": "출혈",
+        "type": "disease"
+      },
+      {
+        "name": "O형 Rh- 음성 적혈구",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "저혈압",
+        "from_type": "symptom",
+        "to": "출혈",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "저혈압이 지속되고 있으며, 외상성 출혈이 의심되는 상황"
+      },
+      {
+        "from": "O형 Rh- 음성 적혈구",
+        "from_type": "medication",
+        "to": "출혈",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "즉시 O형 Rh- 음성 적혈구를 수혈해야 한다"
+      }
+    ]
+  },
+  "2318": {
+    "entities": [
+      {
+        "name": "대량 객혈",
+        "type": "symptom"
+      },
+      {
+        "name": "좌측 폐 병변",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "대량 객혈",
+        "from_type": "symptom",
+        "to": "좌측 폐 병변",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "50대 남자가 대량 객혈로 내원"
+      }
+    ]
+  },
+  "2320": {
+    "entities": [
+      {
+        "name": "청색증",
+        "type": "symptom"
+      },
+      {
+        "name": "저맥박",
+        "type": "symptom"
+      },
+      {
+        "name": "흉부 압박",
+        "type": "treatment"
+      },
+      {
+        "name": "에피네프린",
+        "type": "medication"
+      }
+    ],
+    "relationships": []
+  },
+  "2321": {
+    "entities": [
+      {
+        "name": "고열",
+        "type": "symptom"
+      },
+      {
+        "name": "저혈압",
+        "type": "symptom"
+      },
+      {
+        "name": "Norepinephrine",
+        "type": "medication"
+      }
+    ],
+    "relationships": []
+  },
+  "2322": {
+    "entities": [
+      {
+        "name": "발열",
+        "type": "symptom"
+      },
+      {
+        "name": "구역",
+        "type": "symptom"
+      },
+      {
+        "name": "구토",
+        "type": "symptom"
+      },
+      {
+        "name": "중증열성혈소판감소증후군",
+        "type": "disease"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "발열",
+        "from_type": "symptom",
+        "to": "중증열성혈소판감소증후군",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 발열로 내원"
+      },
+      {
+        "from": "구역",
+        "from_type": "symptom",
+        "to": "중증열성혈소판감소증후군",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 구역으로 내원"
+      },
+      {
+        "from": "구토",
+        "from_type": "symptom",
+        "to": "중증열성혈소판감소증후군",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 구토로 내원"
+      }
+    ]
+  },
+  "2323": {
+    "entities": [
+      {
+        "name": "기운 없음",
+        "type": "symptom"
+      },
+      {
+        "name": "지속적인 구토",
+        "type": "symptom"
+      },
+      {
+        "name": "당뇨병",
+        "type": "disease"
+      },
+      {
+        "name": "IV 칼륨 보충",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "기운 없음",
+        "from_type": "symptom",
+        "to": "당뇨병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "70대 여성이 당뇨 과거력이 있으며, 기운이 없음"
+      },
+      {
+        "from": "지속적인 구토",
+        "from_type": "symptom",
+        "to": "당뇨병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "지속적인 구토로 내원"
+      },
+      {
+        "from": "IV 칼륨 보충",
+        "from_type": "treatment",
+        "to": "당뇨병",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "IV Potassium Replacement"
+      }
+    ]
+  },
+  "2324": {
+    "entities": [
+      {
+        "name": "복강내 출혈",
+        "type": "disease"
+      },
+      {
+        "name": "stupor",
+        "type": "symptom"
+      },
+      {
+        "name": "Ketamine",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "stupor",
+        "from_type": "symptom",
+        "to": "복강내 출혈",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자는 stupor 상태"
+      },
+      {
+        "from": "Ketamine",
+        "from_type": "medication",
+        "to": "복강내 출혈",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "진정제로 Ketamine 사용"
+      }
+    ]
+  },
+  "2325": {
+    "entities": [
+      {
+        "name": "루게릭 병",
+        "type": "disease"
+      },
+      {
+        "name": "심낭삼출",
+        "type": "symptom"
+      },
+      {
+        "name": "pericardiectomy",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "심낭삼출",
+        "from_type": "symptom",
+        "to": "루게릭 병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "루게릭 병력이 있는 환자에서 심낭삼출이 관찰됨"
+      },
+      {
+        "from": "pericardiectomy",
+        "from_type": "treatment",
+        "to": "루게릭 병",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "생존율을 개선할 수 있는 가장 적절한 치료"
+      }
+    ]
+  },
+  "2326": {
+    "entities": [
+      {
+        "name": "식은땀",
+        "type": "symptom"
+      },
+      {
+        "name": "두통",
+        "type": "symptom"
+      },
+      {
+        "name": "흥분",
+        "type": "symptom"
+      },
+      {
+        "name": "고혈압",
+        "type": "disease"
+      },
+      {
+        "name": "암페타민 중독",
+        "type": "disease"
+      },
+      {
+        "name": "로라zepam",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "식은땀",
+        "from_type": "symptom",
+        "to": "고혈압",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 식은땀을 흘리며 두통과 흥분이 심해 왔다"
+      },
+      {
+        "from": "두통",
+        "from_type": "symptom",
+        "to": "고혈압",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 식은땀을 흘리며 두통과 흥분이 심해 왔다"
+      },
+      {
+        "from": "흥분",
+        "from_type": "symptom",
+        "to": "고혈압",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 식은땀을 흘리며 두통과 흥분이 심해 왔다"
+      },
+      {
+        "from": "로라zepam",
+        "from_type": "medication",
+        "to": "고혈압",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "이 환자에게 우선적으로 투여해야 할 약물은 로라zepam"
+      }
+    ]
+  },
+  "2448": {
+    "entities": [
+      {
+        "name": "심근경색",
+        "type": "disease"
+      },
+      {
+        "name": "심전도 검사",
+        "type": "test"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "심전도 검사",
+        "from_type": "test",
+        "to": "심근경색",
+        "to_type": "disease",
+        "type": "DIAGNOSES_FOR",
+        "evidence": "심근경색이 의심되는 환자에게 가장 먼저 시행해야 할 처치"
+      }
+    ]
+  },
+  "2450": {
+    "entities": [
+      {
+        "name": "열사병",
+        "type": "disease"
+      },
+      {
+        "name": "체온 냉각",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "체온 냉각",
+        "from_type": "treatment",
+        "to": "열사병",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "즉시 체온 냉각"
+      }
+    ]
+  },
+  "2451": {
+    "entities": [
+      {
+        "name": "아나필락시스",
+        "type": "disease"
+      },
+      {
+        "name": "에피네프린",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "에피네프린",
+        "from_type": "medication",
+        "to": "아나필락시스",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "아나필락시스의 초기 치료로 가장 먼저 사용해야 하는 약물은 에피네프린"
+      }
+    ]
+  },
+  "2453": {
+    "entities": [
+      {
+        "name": "화상",
+        "type": "disease"
+      },
+      {
+        "name": "Parkland 공식",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "2455": {
+    "entities": [
+      {
+        "name": "패혈증",
+        "type": "disease"
+      },
+      {
+        "name": "저혈압 교정",
+        "type": "treatment"
+      },
+      {
+        "name": "감염 조절",
+        "type": "treatment"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "저혈압 교정",
+        "from_type": "treatment",
+        "to": "패혈증",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "초기 치료 목표로 저혈압 교정"
+      },
+      {
+        "from": "감염 조절",
+        "from_type": "treatment",
+        "to": "패혈증",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "초기 치료 목표로 감염 조절"
+      }
+    ]
+  },
+  "2457": {
+    "entities": [
+      {
+        "name": "외상성 뇌손상",
+        "type": "disease"
+      },
+      {
+        "name": "신경학적 손상",
+        "type": "symptom"
+      },
+      {
+        "name": "글래스고 혼수 척도",
+        "type": "test"
+      },
+      {
+        "name": "뇌 손상",
+        "type": "disease"
+      },
+      {
+        "name": "신경외과적 개입",
+        "type": "treatment"
+      },
+      {
+        "name": "산소 공급",
+        "type": "treatment"
+      },
+      {
+        "name": "혈압 조절",
+        "type": "treatment"
+      },
+      {
+        "name": "뇌관류압",
+        "type": "symptom"
+      }
+    ],
+    "relationships": []
+  },
+  "2458": {
+    "entities": [
+      {
+        "name": "출혈성 쇼크",
+        "type": "disease"
+      },
+      {
+        "name": "패혈성 쇼크",
+        "type": "disease"
+      },
+      {
+        "name": "수액 공급",
+        "type": "treatment"
+      }
+    ],
+    "relationships": []
+  },
+  "2459": {
+    "entities": [],
+    "relationships": []
+  },
+  "2460": {
+    "entities": [],
+    "relationships": []
+  },
+  "2461": {
+    "entities": [
+      {
+        "name": "열사병",
+        "type": "disease"
+      },
+      {
+        "name": "어지러움",
+        "type": "symptom"
+      },
+      {
+        "name": "헛구역질",
+        "type": "symptom"
+      },
+      {
+        "name": "탈수",
+        "type": "symptom"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "어지러움",
+        "from_type": "symptom",
+        "to": "열사병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 어지러워했다고 한다"
+      },
+      {
+        "from": "헛구역질",
+        "from_type": "symptom",
+        "to": "열사병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "환자가 헛구역질을 했다고 한다"
+      },
+      {
+        "from": "탈수",
+        "from_type": "symptom",
+        "to": "열사병",
+        "to_type": "disease",
+        "type": "INDICATES",
+        "evidence": "혀가 말라있고 피부는 건조하다"
+      }
+    ]
+  },
+  "2462": {
+    "entities": [
+      {
+        "name": "저혈당 쇼크",
+        "type": "disease"
+      },
+      {
+        "name": "포도당",
+        "type": "medication"
+      }
+    ],
+    "relationships": [
+      {
+        "from": "포도당",
+        "from_type": "medication",
+        "to": "저혈당 쇼크",
+        "to_type": "disease",
+        "type": "TREATS",
+        "evidence": "저혈당 쇼크 환자에게 포도당 투여"
+      }
+    ]
+  }
+}

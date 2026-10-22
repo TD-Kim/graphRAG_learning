@@ -26,11 +26,16 @@ OUTPUT_DIR = Path(__file__).resolve().parent.parent / "output"
 # ---------- 1. 연결 ----------
 def create_neo4j_driver(uri, username, password):
     # TODO 1-1: GraphDatabase.driver(...) 로 driver 를 만든다. (auth 는 (username, password) 튜플)
-    driver = ...
+    driver = GraphDatabase.driver(uri, auth={username, password})
 
     # TODO 1-2: 연결이 실제로 되는지 확인하는 메서드를 호출한다.
     #           힌트: verify_ 로 시작한다. 실패하면 에러 메시지를 출력하고 다시 raise 하자.
-    ...
+    try:
+        driver.verify_connectivity()
+        print(f"NEO4J DATABASE 연결 성공 : {uri}")
+    except Exception as e:
+        print(f"NEO4J DATABASE 연결 실패 : {e}")
+        raise
 
     return driver
 
@@ -39,7 +44,7 @@ def create_neo4j_driver(uri, username, password):
 def clear_database(driver):
     # TODO 2-1: 모든 노드와 관계를 지우는 Cypher 를 실행한다.
     #           힌트: 관계가 달린 노드도 지워지려면 DELETE 앞에 무엇이 필요할까?
-    query = ...
+    query = "MATCH (n) DETACH DELETE n"
     driver.execute_query(query, database_=NEO4J_DATABASE)
 
 
@@ -231,13 +236,34 @@ def print_graph_statistics(driver):
     # TODO 5-1: 레이블마다 count 쿼리를 날려 {레이블: 개수} dict 를 만든다.
     #   힌트: MATCH (n:Passenger) RETURN count(n) AS count -> .records[0]["count"]
     #         레이블 이름은 파라미터로 못 넘기니 f-string 을 쓰되, 왜 여기선 안전한지 생각해 보자.
-    node_counts = ...
+    node_counts = {
+        label: driver.execute_query(
+            f"MATCH (n:{label}) RETURN COUNT(n) AS count", database_=NEO4J_DATABASE
+        ).records[0]["count"] for label in labels
+    }
 
     # TODO 5-2: 관계 타입도 같은 방식으로. 힌트: MATCH ()-[r:TYPE]->() RETURN count(r) AS count
-    rel_counts = ...
+    rel_counts = {
+        rel: driver.execute_query(
+            f"MATCH ()-[r:{rel}]->() RETURN COUNT(r) AS count", database_=NEO4J_DATABASE    
+        ).records[0]["count"] for rel in rel_types
+    }
+    
+    print("\n" + "=" * 60)
+    print("타이타닉 지식그래프 통계")
+    print("=" * 60)
 
-    print(node_counts)
-    print(rel_counts)
+    print("\n1) 노드:")
+    for label, count in node_counts.items():
+        print(f"  • {label}: {count:,}개 ")    
+    print(f"  -> 총 {sum(node_counts.values()):,}개 노드")
+    
+    print("\n2) 관계:")
+    for rel, count in rel_counts.items():
+        print(f"  • {rel}: {count:,}개")
+    print(f"  -> 총 {sum(rel_counts.values()):,}개 관계")
+    
+    print("\n" + "=" * 60)
 
 
 # ---------- 실행 ----------
