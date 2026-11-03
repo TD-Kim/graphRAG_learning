@@ -6,7 +6,7 @@
 | 파일 | 역할 |
 |---|---|
 | [`text2cypher.ipynb`](../text2cypher.ipynb) | **DB 없이** 프롬프트 → Cypher 생성 과정만 들여다보기 (영화 스키마 예시, `extract_cypher`) |
-| [`text2cypher.py`](../text2cypher.py) (354줄) | 타이타닉 그래프에 **실제로** 질문 → Cypher → 실행 → 답변 (`neo4j-graphrag` 의 GraphRAG) |
+| [`text2cypher.py`](../text2cypher.py) (354줄) | 타이타닉 그래프에 **실제로** 질문 → Cypher → 실행 → 답변 (`neo4j-graphrag` 의 GraphRAG) 상세 주석본: [`step1_annotated.py`](step1_annotated.py) |
 
 ## 한눈에 보기
 
