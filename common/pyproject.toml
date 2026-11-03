@@ -10,10 +10,14 @@ dependencies = [
     "pandas~=3.0",
     "ipykernel>=6.29.0",
 
-    # part3 (pdf2kg)
+    # part2 (pdf2kg)
     "openai>=2.0.0",
     "langchain-text-splitters>=1.1.0",
     "PyMuPDF>=1.25.0",
     "docling>=2.0.0",
     "docling-hierarchical-pdf>=0.1.0",
+
+    # part3 (text2cypher)
+    "neo4j-graphrag[openai]>=1.10.0",
+    "jupyter>=1.0.0",
 ]
