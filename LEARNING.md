@@ -7,7 +7,7 @@
 | 파일 | 하는 일 |
 |---|---|
 | `GUIDE.md` | 원본 코드를 옆에 열고 읽는 안내서: 한눈에 보기, 읽는 순서, 함수별 "왜", **생각해 볼 점**(실제 코드의 약점 포함) |
-| `step1_*annotated.py` | 원본과 코드는 같고 주석만 단 복사본. Part 2 는 파이썬 문법과 함수의 **[출처] [입력] [반환] [왜]** 까지 적었다 (part1, Part 2 전체) |
+| `step1_*annotated.py` | 원본과 코드는 같고 주석만 단 복사본. Part 2 는 파이썬 문법과 함수의 **[출처] [입력] [반환] [왜]** 까지 적었다 (part1, Part 2 전체, part3/text2cypher) |
 | `step2_*.py` | 핵심 함수만 TODO 로 비워 둔 빈칸 채우기. 원본이 정답 |
 | `step3_comments_only.py` | 할 일 목록만 있는 과제. 대부분 **다른 데이터나 도메인에 같은 패턴을 적용**하는 과제 |
 
@@ -37,7 +37,7 @@
 | 순서 | 폴더 | 가이드 |
 |---|---|---|
 | 1 | `part3/vectorsearch` | [GUIDE](part3/vectorsearch/learning/GUIDE.md) |
-| 2 | `part3/text2cypher` | [GUIDE](part3/text2cypher/learning/GUIDE.md) |
+| 2 | `part3/text2cypher` | [GUIDE](part3/text2cypher/learning/GUIDE.md) · [step1](part3/text2cypher/learning/step1_annotated.py) |
 | 3 | `part3/reasoning` | [GUIDE](part3/reasoning/learning/GUIDE.md) |
 | 4 | `part3/vectorcypher` | [GUIDE](part3/vectorcypher/learning/GUIDE.md) |
 | 5 | `part3/vectorcypher_qdrant` | [GUIDE](part3/vectorcypher_qdrant/learning/GUIDE.md) |
