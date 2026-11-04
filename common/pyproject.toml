@@ -16,8 +16,9 @@ dependencies = [
     "PyMuPDF>=1.25.0",
     "docling>=2.0.0",
     "docling-hierarchical-pdf>=0.1.0",
-
+    
     # part3 (text2cypher)
-    "neo4j-graphrag[openai]>=1.10.0",
+    "neo4j-graphrag[anthropic,openai]>=1.21.0,<1.22",
     "jupyter>=1.0.0",
+    "anthropic>=1.12.0,<2.0.0",
 ]
