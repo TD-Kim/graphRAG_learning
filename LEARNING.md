@@ -7,7 +7,7 @@
 | 파일 | 하는 일 |
 |---|---|
 | `GUIDE.md` | 원본 코드를 옆에 열고 읽는 안내서: 한눈에 보기, 읽는 순서, 함수별 "왜", **생각해 볼 점**(실제 코드의 약점 포함) |
-| `step1_*annotated.py` | 원본과 코드는 같고 주석만 단 복사본. Part 2 는 파이썬 문법과 함수의 **[출처] [입력] [반환] [왜]** 까지 적었다 (part1, Part 2 전체, part3/text2cypher) |
+| `step1_*annotated.py` | 원본과 코드는 같고 주석만 단 복사본. Part 2~4 는 파이썬 문법과 함수의 **[출처] [입력] [반환] [왜]** 까지 적었다 (part1~4 의 모든 .py. 노트북만 있는 ragas, create_agent 는 제외) |
 | `step2_*.py` | 핵심 함수만 TODO 로 비워 둔 빈칸 채우기. 원본이 정답 |
 | `step3_comments_only.py` | 할 일 목록만 있는 과제. 대부분 **다른 데이터나 도메인에 같은 패턴을 적용**하는 과제 |
 
@@ -36,25 +36,25 @@
 
 | 순서 | 폴더 | 가이드 |
 |---|---|---|
-| 1 | `part3/vectorsearch` | [GUIDE](part3/vectorsearch/learning/GUIDE.md) |
+| 1 | `part3/vectorsearch` | [GUIDE](part3/vectorsearch/learning/GUIDE.md) · [step1](part3/vectorsearch/learning/step1_annotated.py) |
 | 2 | `part3/text2cypher` | [GUIDE](part3/text2cypher/learning/GUIDE.md) · [step1](part3/text2cypher/learning/step1_annotated.py) |
-| 3 | `part3/reasoning` | [GUIDE](part3/reasoning/learning/GUIDE.md) |
-| 4 | `part3/vectorcypher` | [GUIDE](part3/vectorcypher/learning/GUIDE.md) |
-| 5 | `part3/vectorcypher_qdrant` | [GUIDE](part3/vectorcypher_qdrant/learning/GUIDE.md) |
-| 6 | `part3/community_search` | [GUIDE](part3/community_search/learning/GUIDE.md) |
-| 7 | `part3/toolsretriever` | [GUIDE](part3/toolsretriever/learning/GUIDE.md) |
+| 3 | `part3/reasoning` | [GUIDE](part3/reasoning/learning/GUIDE.md) · [step1](part3/reasoning/learning/step1_annotated.py) |
+| 4 | `part3/vectorcypher` | [GUIDE](part3/vectorcypher/learning/GUIDE.md) · [step1](part3/vectorcypher/learning/step1_annotated.py) |
+| 5 | `part3/vectorcypher_qdrant` | [GUIDE](part3/vectorcypher_qdrant/learning/GUIDE.md) · step1: [graphrag_qdrant](part3/vectorcypher_qdrant/learning/step1_graphrag_qdrant_annotated.py), [ingest_to_qdrant](part3/vectorcypher_qdrant/learning/step1_ingest_to_qdrant_annotated.py) |
+| 6 | `part3/community_search` | [GUIDE](part3/community_search/learning/GUIDE.md) · step1: [community_detection_retail](part3/community_search/learning/step1_community_detection_retail_annotated.py), [retail_community_graphrag](part3/community_search/learning/step1_retail_community_graphrag_annotated.py) |
+| 7 | `part3/toolsretriever` | [GUIDE](part3/toolsretriever/learning/GUIDE.md) · step1: [config](part3/toolsretriever/learning/step1_config_annotated.py), [main](part3/toolsretriever/learning/step1_main_annotated.py), [prompts](part3/toolsretriever/learning/step1_prompts_annotated.py), [schema](part3/toolsretriever/learning/step1_schema_annotated.py), [text2cypher_retriever](part3/toolsretriever/learning/step1_text2cypher_retriever_annotated.py), [vector_retriever](part3/toolsretriever/learning/step1_vector_retriever_annotated.py), [vectorcypher_retriever](part3/toolsretriever/learning/step1_vectorcypher_retriever_annotated.py) |
 | 8 | `part3/evaluation/ragas` | [GUIDE](part3/evaluation/ragas/learning/GUIDE.md) |
-| 9 | `part3/evaluation/neo4j_text2cypher` | [GUIDE](part3/evaluation/neo4j_text2cypher/learning/GUIDE.md) |
+| 9 | `part3/evaluation/neo4j_text2cypher` | [GUIDE](part3/evaluation/neo4j_text2cypher/learning/GUIDE.md) · step1: [eval](part3/evaluation/neo4j_text2cypher/learning/step1_eval_annotated.py), [retriever](part3/evaluation/neo4j_text2cypher/learning/step1_retriever_annotated.py) |
 
 ## Part 4. GraphRAG 에이전트와 챗봇
 
 | 순서 | 폴더 | 가이드 |
 |---|---|---|
 | 1 | `part4/create_agent` | [GUIDE](part4/create_agent/learning/GUIDE.md) |
-| 2 | `part4/streamlit` | [GUIDE](part4/streamlit/learning/GUIDE.md) |
-| 3 | `part4/graphrag_tool_agent` | [GUIDE](part4/graphrag_tool_agent/learning/GUIDE.md) |
-| 4 | `part4/graphrag_text2cypher_agent` | [GUIDE](part4/graphrag_text2cypher_agent/learning/GUIDE.md) |
-| 5 | `part4/final_chatbot` | [GUIDE](part4/final_chatbot/learning/GUIDE.md) |
+| 2 | `part4/streamlit` | [GUIDE](part4/streamlit/learning/GUIDE.md) · step1: [01_basics](part4/streamlit/learning/step1_01_basics_annotated.py), [02_chatbot_ui](part4/streamlit/learning/step1_02_chatbot_ui_annotated.py) |
+| 3 | `part4/graphrag_tool_agent` | [GUIDE](part4/graphrag_tool_agent/learning/GUIDE.md) · step1: [main](part4/graphrag_tool_agent/learning/step1_main_annotated.py), [tools](part4/graphrag_tool_agent/learning/step1_tools_annotated.py) |
+| 4 | `part4/graphrag_text2cypher_agent` | [GUIDE](part4/graphrag_text2cypher_agent/learning/GUIDE.md) · step1: [main](part4/graphrag_text2cypher_agent/learning/step1_main_annotated.py), [nodes](part4/graphrag_text2cypher_agent/learning/step1_nodes_annotated.py), [prompts](part4/graphrag_text2cypher_agent/learning/step1_prompts_annotated.py), [schema](part4/graphrag_text2cypher_agent/learning/step1_schema_annotated.py), [state](part4/graphrag_text2cypher_agent/learning/step1_state_annotated.py) |
+| 5 | `part4/final_chatbot` | [GUIDE](part4/final_chatbot/learning/GUIDE.md) · [step1](part4/final_chatbot/learning/step1_annotated.py) |
 
 ## 데이터 의존 관계
 

@@ -155,7 +155,7 @@ graph = create_graph()
 
 
 # if __name__ == "__main__": 이 파일을 직접 실행할 때만 아래 블록 실행 (import 될 때는 실행 안 됨)
-# 주의: 바로 위 80줄에서 이미 graph 를 만들었는데 한 번 더 만든다 (무해하지만 중복)
+# 주의: 바로 위 전역 graph = create_graph() 에서 이미 graph 를 만들었는데 한 번 더 만든다 (무해하지만 중복)
 if __name__ == "__main__":
     graph = create_graph()
 

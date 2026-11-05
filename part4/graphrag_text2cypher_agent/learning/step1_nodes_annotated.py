@@ -21,7 +21,7 @@ LangGraph/LangChain/neo4j 설명은 설치 소스(langgraph 1.1.9, langchain-cor
                                             correct_cypher_node (실행 오류)
   answer_node -> END
 
-중요: 이 파일은 import 되는 순간 Neo4j 에 접속해 스키마를 읽는다 (22줄). DB 와 .env 가 준비되어야 import 가 된다.
+중요: 이 파일은 import 되는 순간 Neo4j 에 접속해 스키마를 읽는다 (schema_str = get_cached_schema() 줄). DB 와 .env 가 준비되어야 import 가 된다.
 
 읽는 순서 권장: guardrail_node -> generate_cypher_node -> validate_query_node -> execute_cypher_node
                -> correct_cypher_node -> route_* 3개 -> answer_node
@@ -485,7 +485,7 @@ def route_execution(state: State, max_regenerate: int = 2) -> Literal["generate_
     - 에러: 수정 (기존 로직)
     - 정상: 답변 생성
     """
-    # 바다코끼리 연산자 := (195줄 설명). 실행 노드 바로 다음이라 db_outputs 는 항상 있다
+    # 바다코끼리 연산자 := (correct_cypher_node 에서 설명). 실행 노드 바로 다음이라 db_outputs 는 항상 있다
     if db_outputs := state.get("db_outputs", []):
         db_result = db_outputs[-1]
     else:
