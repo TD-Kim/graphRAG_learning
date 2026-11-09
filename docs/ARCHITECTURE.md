@@ -156,6 +156,7 @@ tests/part3_rag/sparse_retrieval/test_p3_07_bm25.py
 - `starter.py` 와 `solution.py` 는 **같은 공개 함수·클래스 시그니처**를 가진다. starter 의 TODO 는 `raise NotImplementedError("TODO: ...")` 로 표시한다.
 - 실행 진입점은 `if __name__ == "__main__":` 블록. 예상 출력은 README 에 적는다.
 - 난이도는 README 맨 위와 TODO 주석에 `Level 1/2/3` 으로 표시한다.
+- TODO 아래에는 `HINT 1` / `HINT 2` / `WHY` / `REF` 주석을 단다 (§4.4).
 - 실습 하나의 흐름: **개념 → 수학 원리 → 데이터 흐름 → 코드 구조 → 구현할 부분 → 실행법 → 예상 출력 → 결과 해석 → 과제 → 정답**.
 
 ### 4.2 테스트 규약
@@ -185,11 +186,105 @@ tests/part3_rag/sparse_retrieval/test_p3_07_bm25.py
 12. 다음 단계 연결
 ```
 
-### 4.4 실험 기록 규약
+### 4.4 주석 규약 (HINT / WHY / REF)
+
+학습자가 막혔을 때 **정답을 보기 전에 스스로 한 걸음 더 갈 수 있도록** starter 에 단계별 힌트를 두고, solution 에는 "왜"를 남긴다.
+
+**starter.py — 각 TODO 바로 아래**
+
+| 태그 | 내용 | 규칙 |
+|---|---|---|
+| `# TODO n:` | 구현할 일 (무엇을) | 번호는 파일 안에서 연속 |
+| `# HINT 1:` | 방향만 제시 — 떠올려야 할 개념·함수 | 코드 조각 금지 |
+| `# HINT 2:` | 더 구체적으로 — 텐서 shape, 사용할 API 이름, 주의할 축(dim) | **정답 코드를 그대로 쓰지 않는다** |
+| `# WHY:` | 이 단계가 왜 필요한가 (빠뜨리면 무슨 일이 생기는가) | 필수 |
+| `# REF:` | 출처 — 논문(저자, 연도, 제목, 절 번호), 공식 문서 URL(PyTorch/HF/Neo4j/Spring 등), 표준 교재 | **실제로 존재하는 것만.** 불확실하면 REF 를 생략하고 WHY 만 쓴다. 지어낸 URL·절 번호 금지 |
+
+**solution.py — 각 핵심 줄**
+- "무엇을"이 아니라 **"왜"** 를 설명하는 주석.
+- 텐서가 바뀌는 줄에는 **shape 주석**: `# (batch, heads, seq, d_k)`.
+- starter 와 **같은 TODO 번호와 같은 REF** 를 유지해 두 파일을 나란히 비교할 수 있게 한다.
+
+**검수 체크리스트 (실습 PR 마다)**
+- [ ] 모든 TODO 에 HINT 1·HINT 2·WHY 가 있다 (REF 는 확실할 때만)
+- [ ] HINT 에 정답 한 줄이 그대로 들어 있지 않다
+- [ ] REF 의 URL 을 실제로 열어 확인했고, 논문 절 번호가 원문과 일치한다
+- [ ] solution 의 shape 주석이 실제 텐서 shape 와 같다 (테스트로 검증되면 더 좋음)
+
+#### 예시 — P1-09 Scaled Dot-Product Attention
+
+`starter.py` (TODO 7~9)
+
+```python
+import math
+import torch
+import torch.nn.functional as F
+
+
+def scaled_dot_product_attention(q, k, v, mask=None):
+    """q, k, v: (batch, heads, seq, d_k)  /  mask: (batch, 1, seq, seq), True = 가릴 위치"""
+    d_k = q.size(-1)
+
+    # TODO 7: 질의(q)와 키(k)의 유사도 점수 행렬을 만들고 스케일링하라.
+    # HINT 1: 두 벡터의 유사도는 내적이다. 모든 (질의, 키) 쌍의 내적을 한 번에 구하는 행렬 연산을 떠올려라.
+    # HINT 2: k 의 마지막 두 축을 바꿔야 (seq, d_k) @ (d_k, seq) 가 된다 → torch.matmul, Tensor.transpose.
+    #         결과 shape 는 (batch, heads, seq, seq). 스케일 값은 d_k 에서 나온다.
+    # WHY: 스케일링이 없으면 d_k 가 클 때 내적 값의 분산이 d_k 에 비례해 커지고, softmax 가 한 위치로
+    #      쏠려(거의 one-hot) gradient 가 0 에 가까워진다.
+    # REF: Vaswani et al., 2017, "Attention Is All You Need", §3.2.1 Scaled Dot-Product Attention
+    scores = ...
+
+    # TODO 8: mask 가 주어지면, 가릴 위치의 점수를 softmax 후 0 이 되도록 바꿔라.
+    # HINT 1: softmax 결과가 0 이 되려면 입력이 어떤 값이어야 하는가?
+    # HINT 2: Tensor.masked_fill 을 쓴다. mask 는 브로드캐스팅으로 (batch, heads, seq, seq) 에 맞춰진다.
+    # WHY: causal mask 가 없으면 디코더가 미래 토큰을 보고 "정답을 베껴" 학습하게 되고,
+    #      padding mask 가 없으면 의미 없는 패딩 토큰에 주의가 분산된다.
+    # REF: Vaswani et al., 2017, "Attention Is All You Need", §3.2.3 Applications of Attention in our Model
+    # REF: https://pytorch.org/docs/stable/generated/torch.Tensor.masked_fill_.html
+    if mask is not None:
+        scores = ...
+
+    # TODO 9: 점수를 확률(가중치)로 바꾸고, 그 가중치로 v 를 가중합하라.
+    # HINT 1: 각 질의 위치마다 "모든 키에 대한 가중치 합 = 1" 이 되어야 한다.
+    # HINT 2: F.softmax 의 dim 은 키 축(마지막 축)이다. 가중합은 (seq, seq) @ (seq, d_k) 행렬곱.
+    # WHY: 가중치 합이 1 이어야 출력이 v 들의 볼록 결합(convex combination)이 되어 값의 크기가 안정적이다.
+    # REF: https://pytorch.org/docs/stable/generated/torch.nn.functional.softmax.html
+    weights = ...
+    output = ...
+    return output, weights
+```
+
+`solution.py` (같은 TODO 번호·REF 유지)
+
+```python
+def scaled_dot_product_attention(q, k, v, mask=None):
+    d_k = q.size(-1)
+
+    # TODO 7  REF: Vaswani et al., 2017, §3.2.1
+    # 내적 = 유사도. sqrt(d_k) 로 나눠 분산을 1 근처로 되돌려 softmax 포화를 막는다.
+    scores = torch.matmul(q, k.transpose(-2, -1)) / math.sqrt(d_k)  # (batch, heads, seq, seq)
+
+    # TODO 8  REF: Vaswani et al., 2017, §3.2.3
+    if mask is not None:
+        # -inf 는 softmax 후 정확히 0 → 가린 위치가 가중합에 전혀 기여하지 않는다.
+        # (fp16 에서 한 행 전체가 가려지면 NaN 이 되므로, 그 경우는 큰 음수를 쓰는 대안도 README 에 설명)
+        scores = scores.masked_fill(mask, float("-inf"))  # (batch, heads, seq, seq)
+
+    # TODO 9
+    # 키 축(dim=-1)으로 정규화해야 "질의마다" 가중치 합이 1 이 된다.
+    weights = F.softmax(scores, dim=-1)                   # (batch, heads, seq, seq)
+    # 가중치로 v 를 섞는다 → 각 위치가 관련 있는 위치의 정보를 모은 표현이 된다.
+    output = torch.matmul(weights, v)                     # (batch, heads, seq, d_k)
+    return output, weights
+```
+
+> 테스트(P1-09): 같은 입력에서 `F.scaled_dot_product_attention` 결과와 `torch.testing.assert_close` 로 비교한다. 주의: PyTorch 의 bool `attn_mask` 는 **True = 참여(보이는 위치)** 로, 이 예시의 mask(True = 가릴 위치)와 반대이므로 `attn_mask=~mask` 를 넘긴다. (REF: https://pytorch.org/docs/stable/generated/torch.nn.functional.scaled_dot_product_attention.html)
+
+### 4.5 실험 기록 규약
 - 학습·벤치마크를 돌리면 `experiments/` 에 기록한다. 형식: [experiments/README.md](../experiments/README.md)
 - 결과 CSV·그림은 `experiments/<날짜>_<실습ID>_<요약>/` 에 둔다. 모델 체크포인트는 커밋하지 않는다.
 
-### 4.5 기타 규약
+### 4.6 기타 규약
 - 시크릿은 `.env` 에만 (기존 저장소 규칙과 동일).
 - 큰 파일(모델, 원본 데이터, 인덱스)은 커밋하지 않는다. Part 1 시작 시 `.gitignore` 에 `datasets/raw/`, `experiments/**/checkpoints/`, `*.faiss`, `*.safetensors` 등을 추가한다.
 - 공용 유틸(seed 고정, 시간·GPU 메모리 측정, 실험 기록 저장)은 처음 필요해지는 시점에 `labkit/` 같은 작은 패키지로 묶는다. 미리 만들지 않는다.

@@ -231,3 +231,16 @@ flowchart LR
 - 개선을 가정하지 않는다. 나쁜 결과도 기록한다.
 - 무작위성이 있는 실험은 seed 를 고정하고, 가능하면 3회 반복해 평균·편차를 적는다.
 - 실행 환경(GPU, 라이브러리 버전)을 `experiments/` 기록에 남긴다.
+
+## 7. 학습 코드 주석 규약 (Part 1 부터 모든 실습에 적용)
+
+막혔을 때 바로 정답을 보지 않고 단계적으로 풀 수 있게 한다. 상세 규칙과 예시(Self-Attention TODO 7~9)는 [ARCHITECTURE.md §4.4](ARCHITECTURE.md#44-주석-규약-hint--why--ref).
+
+| 파일 | 주석 |
+|---|---|
+| `starter.py` | 각 TODO 아래 `# HINT 1:`(방향) → `# HINT 2:`(shape·API 이름) → `# WHY:`(왜 필요한가) → `# REF:`(출처) |
+| `solution.py` | 핵심 줄마다 "왜" 주석 + shape 주석 `# (batch, seq, d_model)`, starter 와 같은 TODO 번호·REF |
+
+- HINT 에 정답 코드를 그대로 넣지 않는다.
+- REF 는 실제로 존재하는 논문(저자, 연도, 제목, 절 번호)·공식 문서 URL·표준 교재만. 불확실하면 REF 없이 WHY 만 쓴다. 지어낸 URL·절 번호 금지.
+- 권장 풀이 순서: TODO 읽기 → 스스로 시도 → HINT 1 → HINT 2 → WHY 로 의미 확인 → 테스트 → (그래도 막히면) solution 비교.
