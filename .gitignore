@@ -221,3 +221,6 @@ __marimo__/
 
 # LangGraph dev server (langgraph dev) local state
 .langgraph_api/
+
+# AI Lab (Python 3.12 전용 환경, docs/ENVIRONMENT.md 참고)
+.venv-ailab/

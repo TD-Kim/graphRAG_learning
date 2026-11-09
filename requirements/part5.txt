@@ -1,0 +1,4 @@
+# Part 5. Fine-tuning
+-r part2.txt
+-r part3.txt
+sentence-transformers[train]>=3.3

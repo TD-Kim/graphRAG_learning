@@ -1,0 +1,5 @@
+# Part 4. GraphRAG 내부 원리
+-r part3.txt
+neo4j~=5.28                  # 강의 트랙과 동일 버전대
+neo4j-graphrag>=1.21         # 비교군: VectorCypherRetriever, HybridRetriever, Text2CypherRetriever
+networkx>=3.4                # 그래프 자료구조·탐색 비교군

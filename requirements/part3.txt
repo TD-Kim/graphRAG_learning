@@ -1,0 +1,24 @@
+# Part 3. RAG 내부 알고리즘
+-r part1.txt
+sentence-transformers>=3.3   # 임베딩, CrossEncoder
+transformers>=4.50
+faiss-cpu>=1.9               # Windows 는 CPU 판만 제공
+scikit-learn>=1.6            # TF-IDF 비교군
+rank-bm25>=0.2.2             # BM25 비교군
+bm25s>=0.2                   # BM25 비교군 (빠른 구현)
+kiwipiepy>=0.20              # 한국어 형태소 토큰화
+pymupdf>=1.25                # PDF 로딩 (강의 pdf2kg 와 동일 계열)
+langchain-text-splitters>=1.0  # 청킹 비교군
+# --- 하이브리드 검색 프레임워크 비교 (P3-09) ---
+langchain>=1.0
+langchain-classic>=1.0       # LangChain 1.x 의 레거시 retriever(EnsembleRetriever 등) 위치 — 설치 버전 문서 확인
+langchain-community>=0.4     # BM25Retriever, FAISS vectorstore
+langchain-huggingface>=1.0
+llama-index-core>=0.12
+llama-index-retrievers-bm25>=0.5
+llama-index-embeddings-huggingface>=0.5
+haystack-ai>=2.10
+# --- 선택 ---
+chromadb>=1.0                # P3-13
+ranx>=0.3                    # P3-11 IR 지표 비교군
+ollama>=0.4                  # P3-14 로컬 LLM 생성

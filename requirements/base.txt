@@ -1,0 +1,6 @@
+# 공통 기반 (AI Lab, Python 3.12)
+numpy>=2.2
+pandas>=2.2
+matplotlib>=3.9
+tqdm>=4.66
+python-dotenv>=1.0

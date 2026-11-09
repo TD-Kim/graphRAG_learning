@@ -1,0 +1,5 @@
+# 테스트 · 린트 · 노트북
+pytest>=8.3
+ruff>=0.8
+ipykernel>=6.29
+jupyter>=1.1

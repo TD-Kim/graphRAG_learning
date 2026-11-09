@@ -1,0 +1,9 @@
+# Part 2. LLM 학습 원리
+-r part1.txt
+transformers>=4.50
+datasets>=3.0
+accelerate>=1.0
+safetensors>=0.4
+peft>=0.14              # P2-09 비교군
+trl>=0.15               # P2-08 SFT 비교군
+bitsandbytes>=0.45      # P2-10 QLoRA (Windows 공식 휠, CUDA torch 필요)

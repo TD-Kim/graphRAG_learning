@@ -1,0 +1,8 @@
+# Part 1. AI/딥러닝 내부 원리
+# !! torch 는 먼저 CUDA 인덱스로 설치:
+#    uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+-r base.txt
+torch>=2.6
+tokenizers>=0.21        # P1-02 비교군: HF BPE
+tiktoken>=0.8           # P1-02 비교군: GPT 계열 BPE
+# gensim>=4.3           # (선택) P1-06 비교군. cp313 까지만 휠 제공 → 3.12 환경에서만
